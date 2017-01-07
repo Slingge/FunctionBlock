@@ -20,7 +20,8 @@
         <activity android:name=".ui.layout.LayoutViewActivity" />
         <!--卡片布局-->
         <activity android:name=".ui.layout.CardViewLayout" />
-
+        <!--滑动隐藏显示标题、导航-->
+        <activity android:name=".ui.layout.SlidingHideBarLayout" />
 
     </application>
 

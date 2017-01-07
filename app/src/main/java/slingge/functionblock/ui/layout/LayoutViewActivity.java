@@ -27,6 +27,9 @@ public class LayoutViewActivity extends SlinggeActivity implements View.OnClickL
     private void init() {
         TextView tv_card_layout = (TextView) findViewById(R.id.tv_card_layout);
         tv_card_layout.setOnClickListener(this);
+
+        TextView tv_slidingbar_layout = (TextView) findViewById(R.id.tv_slidingbar_layout);
+        tv_slidingbar_layout.setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +38,9 @@ public class LayoutViewActivity extends SlinggeActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.tv_card_layout:
                 startActivity(new Intent(this, CardViewLayout.class));
+                break;
+            case R.id.tv_slidingbar_layout:
+                startActivity(new Intent(this, SlidingHideBarLayout.class));
                 break;
         }
 

@@ -7,6 +7,8 @@ import slingge.functionblock.R;
 import slingge.functionblock.ui.SlinggeActivity;
 
 /**
+ * 卡片布局，相当于FrameLayout
+ * 需要 compile 'com.android.support:cardview-v7:24.2.1'
  * Created by Slingge on 2017/1/7 0007.
  */
 
