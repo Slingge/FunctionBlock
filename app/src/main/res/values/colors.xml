@@ -3,4 +3,41 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!--白-->
+    <color name="white">#FFFFFF</color>
+    <!--黑色字体颜色-->
+    <color name="black">#000000</color>
+    <!--灰色背景-->
+    <color name="bg_gray">#EEE</color>
+    <!--分割线-->
+    <color name="Line">#E8E8E8</color>
+    <!--深色分割线-->
+    <color name="lines">#FF999999</color>
+    <!--红色字体-->
+    <color name="red">#FF0000</color>
+    <!--半透明-->
+    <color name="half_transparent">#e0000000</color>
+    <!--全透明-->
+    <color name="all_transparent">#00000000</color>
+    <!--灰色字体-->
+    <color name="gray">#BCBCBC</color>
+    <!--"我的"页面背景颜色-->
+    <color name="mycenter_bg">#F3F3F3</color>
+    <!--"我的"信息背景颜色-->
+    <color name="myinformation_bg">#E84F3F</color>
+    <!--余额优惠券行的背景颜色-->
+    <color name="myrest_bg">#DA4839</color>
+    <!--按钮背景颜色-->
+    <color name="button_bg">#E84B3A</color>
+    <!--输入框下划线颜色-->
+    <color name="lint_bg_gray">#CDCDCD</color>
+    <!--主题色-->
+    <color name="AsukaColor">#FF0000</color>
+    <!--青紫色-->
+    <color name="violet">#6950a1</color>
+    <!--朱色-->
+    <color name="chinese_red">#f26522</color>
+    <!--白色半透明-->
+    <color name="half_white">#e0ffffff</color>
+    <color name="province_line_border">#C7C7C7</color>
 </resources>

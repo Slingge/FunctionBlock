@@ -16,8 +16,11 @@
             </intent-filter>
         </activity>
 
+        <!--布局-->
+        <activity android:name=".ui.layout.LayoutViewActivity" />
         <!--卡片布局-->
-        <activity android:name=".ui.layout.CardViewLayout"/>
+        <activity android:name=".ui.layout.CardViewLayout" />
+
 
     </application>
 
