@@ -23,6 +23,14 @@
         <!--滑动隐藏显示标题、导航-->
         <activity android:name=".ui.layout.SlidingHideBarLayout" />
 
+
+        <!--RecyclerView-->
+        <activity android:name=".ui.recyclerView.RecyclerViewActivity" />
+
+        <!-- 带HeaderView的分页加载LinearLayout RecyclerView-->
+        <activity android:name=".ui.recyclerView.EndlessLinearLayoutActivity" />
+
+
     </application>
 
 </manifest>
