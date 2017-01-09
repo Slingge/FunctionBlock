@@ -17,11 +17,7 @@ import slingge.functionblock.ui.recyclerView.bean.Entity;
 public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
 
     protected Context mContext;
-    protected ArrayList<T> list = new ArrayList<>();
-
-
-
-
+    protected ArrayList<T> mDataList = new ArrayList<>();
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,33 +31,33 @@ public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return mDataList.size();
     }
 
     public List<T> getdatalist() {
-        return list;
+        return mDataList;
     }
 
     public void setDataList(Collection<T> dataList) {
-        this.list.clear();
-        this.list.addAll(dataList);
+        this.mDataList.clear();
+        this.mDataList.addAll(dataList);
         notifyDataSetChanged();
     }
 
     public void addAll(Collection<T> dataList) {
-        int lastIndex = this.list.size();
-        if (this.list.addAll(dataList)) {
-            notifyItemRangeInserted(lastIndex, list.size());
+        int lastIndex = this.mDataList.size();
+        if (this.mDataList.addAll(dataList)) {
+            notifyItemRangeInserted(lastIndex, mDataList.size());
         }
     }
 
     public void delete(int position) {
-        list.remove(position);
+        mDataList.remove(position);
         notifyDataSetChanged();
     }
 
-    public void clean() {
-        list.clear();
+    public void clear() {
+        mDataList.clear();
         notifyDataSetChanged();
     }
 
