@@ -11,7 +11,6 @@ import slingge.functionblock.ui.recyclerView.RecyclerViewActivity;
 
 public class MainActivity extends SlinggeActivity implements View.OnClickListener {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
