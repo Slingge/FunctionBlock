@@ -3,6 +3,7 @@
     package="slingge.functionblock">
 
     <application
+        android:name=".application.SApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,18 +18,27 @@
         </activity>
 
         <!--布局-->
-        <activity android:name=".ui.layout.LayoutViewActivity" />
+        <activity
+            android:name=".ui.layout.LayoutViewActivity"
+            android:screenOrientation="portrait" />
         <!--卡片布局-->
-        <activity android:name=".ui.layout.CardViewLayout" />
+        <activity
+            android:name=".ui.layout.CardViewLayout"
+            android:screenOrientation="portrait" />
         <!--滑动隐藏显示标题、导航-->
-        <activity android:name=".ui.layout.SlidingHideBarLayout" />
-
+        <activity
+            android:name=".ui.layout.SlidingHideBarLayout"
+            android:screenOrientation="portrait" />
 
         <!--RecyclerView-->
-        <activity android:name=".ui.recyclerView.RecyclerViewActivity" />
+        <activity
+            android:name=".ui.recyclerView.RecyclerViewActivity"
+            android:screenOrientation="portrait" />
 
         <!-- 带HeaderView的分页加载LinearLayout RecyclerView-->
-        <activity android:name=".ui.recyclerView.EndlessLinearLayoutActivity" />
+        <activity
+            android:name=".ui.recyclerView.EndlessLinearLayoutActivity"
+            android:screenOrientation="portrait" />
 
 
     </application>

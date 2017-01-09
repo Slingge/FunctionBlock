@@ -20,7 +20,6 @@ import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.adapter.ListBaseAdapter;
 import slingge.functionblock.ui.recyclerView.bean.ItemModel;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * 带HeaderView的分页加载LinearLayout RecyclerView
@@ -40,8 +39,10 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
     }
+
+
+
 
 
     private class DataAdapter extends ListBaseAdapter<ItemModel> {
