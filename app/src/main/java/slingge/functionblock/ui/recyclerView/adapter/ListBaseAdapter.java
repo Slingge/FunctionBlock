@@ -20,7 +20,6 @@ public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
     protected Context mContext;
     protected ArrayList<T> list = new ArrayList<>();
 
-
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
