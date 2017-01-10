@@ -3,6 +3,7 @@ package slingge.functionblock.ui.recyclerView.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,9 +19,6 @@ public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
 
     protected Context mContext;
     protected ArrayList<T> list = new ArrayList<>();
-
-
-
 
 
     @Override
@@ -52,6 +50,8 @@ public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
         int lastIndex = this.list.size();
         if (this.list.addAll(dataList)) {
             notifyItemRangeInserted(lastIndex, list.size());
+        } else {
+            Toast.makeText(mContext, "没有添加数据", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -60,7 +60,7 @@ public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
         notifyDataSetChanged();
     }
 
-    public void clean() {
+    public void clear() {
         list.clear();
         notifyDataSetChanged();
     }
