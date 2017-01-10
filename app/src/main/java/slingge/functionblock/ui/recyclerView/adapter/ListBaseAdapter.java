@@ -3,6 +3,7 @@ package slingge.functionblock.ui.recyclerView.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -17,7 +18,8 @@ import slingge.functionblock.ui.recyclerView.bean.Entity;
 public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
 
     protected Context mContext;
-    protected ArrayList<T> mDataList = new ArrayList<>();
+    protected ArrayList<T> list = new ArrayList<>();
+
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -31,33 +33,33 @@ public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return mDataList.size();
+        return list.size();
     }
 
     public List<T> getdatalist() {
-        return mDataList;
+        return list;
     }
 
     public void setDataList(Collection<T> dataList) {
-        this.mDataList.clear();
-        this.mDataList.addAll(dataList);
+        this.list.clear();
+        this.list.addAll(dataList);
         notifyDataSetChanged();
     }
 
     public void addAll(Collection<T> dataList) {
-        int lastIndex = this.mDataList.size();
-        if (this.mDataList.addAll(dataList)) {
-            notifyItemRangeInserted(lastIndex, mDataList.size());
+        int lastIndex = this.list.size();
+        if (this.list.addAll(dataList)) {
+            notifyItemRangeInserted(lastIndex, list.size());
         }
     }
 
     public void delete(int position) {
-        mDataList.remove(position);
+        list.remove(position);
         notifyDataSetChanged();
     }
 
     public void clear() {
-        mDataList.clear();
+        list.clear();
         notifyDataSetChanged();
     }
 

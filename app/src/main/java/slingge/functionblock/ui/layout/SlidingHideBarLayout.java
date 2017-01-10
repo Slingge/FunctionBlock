@@ -16,7 +16,6 @@ import slingge.functionblock.ui.SlinggeActivity;
 
 public class SlidingHideBarLayout extends SlinggeActivity {
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

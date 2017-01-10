@@ -22,11 +22,6 @@
         android:textSize="@dimen/sp_16"
         android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"/>
-
     <View
         android:layout_width="@dimen/dp_72"
         android:layout_height="@dimen/dp_066"
