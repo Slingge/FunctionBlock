@@ -50,8 +50,6 @@ public class ListBaseAdapter<T extends Entity> extends RecyclerView.Adapter {
         int lastIndex = this.list.size();
         if (this.list.addAll(dataList)) {
             notifyItemRangeInserted(lastIndex, list.size());
-        } else {
-            Toast.makeText(mContext, "没有添加数据", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -45,6 +45,10 @@
             android:name=".ui.recyclerView.EndlessLinearLayoutActivity"
             android:screenOrientation="portrait" />
 
+        <!--滑动隐藏toolbar-->
+        <activity
+            android:name=".ui.recyclerView.CollapsingToolbarLayoutActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

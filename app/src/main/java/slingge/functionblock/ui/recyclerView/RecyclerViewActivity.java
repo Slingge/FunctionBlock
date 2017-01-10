@@ -27,6 +27,8 @@ public class RecyclerViewActivity extends SlinggeActivity implements View.OnClic
     private void init() {
         TextView tv_endlessline = (TextView) findViewById(R.id.tv_endlessline);
         tv_endlessline.setOnClickListener(this);
+        TextView tv_collapsing_toolbar = (TextView) findViewById(R.id.tv_collapsing_toolbar);
+        tv_collapsing_toolbar.setOnClickListener(this);
     }
 
 
@@ -35,6 +37,9 @@ public class RecyclerViewActivity extends SlinggeActivity implements View.OnClic
         switch (view.getId()) {
             case R.id.tv_endlessline:
                 startActivity(new Intent(this, EndlessLinearLayoutActivity.class));
+                break;
+            case R.id.tv_collapsing_toolbar:
+                startActivity(new Intent(this, CollapsingToolbarLayoutActivity.class));
                 break;
         }
     }
