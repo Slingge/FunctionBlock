@@ -4,9 +4,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.view.animation.FastOutLinearInInterpolator;
-import android.support.v7.view.menu.ActionMenuItemView;
 import android.support.v7.widget.LinearLayoutManager;
 
 import com.github.jdsjlzx.recyclerview.LRecyclerView;
@@ -26,8 +23,7 @@ import slingge.functionblock.view.StatusBarUtil;
 
 /**
  * 使用CoordinatorLayout协调者布局为根布局
- * <p>
- * <p>
+ *
  * Created by Slingge on 2017/1/10 0010.
  */
 
@@ -59,9 +55,6 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview_collapsing_toolbar_layout);
-        if (android.os.Build.VERSION.SDK_INT >= 21) {
-            StatusBarUtil.setTranslucent(this);
-        }
 
         mRecyclerView = (LRecyclerView) findViewById(R.id.list);
         ArrayList<ItemModel> dataList = new ArrayList<>();
@@ -69,7 +62,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
 
             ItemModel item = new ItemModel();
             item.id = i;
-            item.title = "item" + i;
+            item.title = "Winry Rockbell" + i;
             dataList.add(item);
         }
 
