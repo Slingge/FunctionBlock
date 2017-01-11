@@ -30,6 +30,7 @@ import slingge.functionblock.R;
 import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.adapter.ListBaseAdapter;
 import slingge.functionblock.ui.recyclerView.bean.ItemModel;
+import slingge.functionblock.ui.recyclerView.weight.SampleFooter;
 import slingge.functionblock.ui.recyclerView.weight.SampleHeader;
 import slingge.functionblock.util.NetworkUtils;
 import slingge.functionblock.util.ToastUtil;
@@ -42,11 +43,17 @@ import slingge.functionblock.util.ToastUtil;
 
 public class EndlessLinearLayoutActivity extends SlinggeActivity {
 
-    /**服务器端一共多少条数据*/
+    /**
+     * 服务器端一共多少条数据
+     */
     private static final int TOTAL_COUNTER = 64;
-    /**每一页展示多少条数据*/
+    /**
+     * 每一页展示多少条数据
+     */
     private static final int REQUEST_COUNT = 10;
-    /**已经获取到多少条数据了*/
+    /**
+     * 已经获取到多少条数据了
+     */
     private static int mCurrentCounter = 0;
 
     private LRecyclerView mRecyclerView = null;
@@ -85,6 +92,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         mRecyclerView.setArrowImageView(R.drawable.ic_pulltorefresh_arrow);
 
         RecyclerViewUtils.setHeaderView(mRecyclerView, new SampleHeader(this));
+        RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
 
         mRecyclerView.setLScrollListener(new LRecyclerView.LScrollListener() {
             @Override
@@ -99,18 +107,18 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
 
             @Override
             public void onScrollUp() {
-                Toast.makeText(EndlessLinearLayoutActivity.this,"向上",Toast.LENGTH_SHORT).show();
+                Toast.makeText(EndlessLinearLayoutActivity.this, "向上", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onScrollDown() {
-                Toast.makeText(EndlessLinearLayoutActivity.this,"向下",Toast.LENGTH_SHORT).show();
+                Toast.makeText(EndlessLinearLayoutActivity.this, "向下", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onBottom() {
                 LoadingFooter.State state = RecyclerViewStateUtils.getFooterViewState(mRecyclerView);
-                if(state == LoadingFooter.State.Loading) {
+                if (state == LoadingFooter.State.Loading) {
                     return;
                 }
 
@@ -159,7 +167,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
             }
             switch (msg.what) {
                 case -1:
-                    if(activity.isRefresh){
+                    if (activity.isRefresh) {
                         activity.mDataAdapter.clear();
                         mCurrentCounter = 0;
                     }
@@ -176,7 +184,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
                         newList.add(item);
                     }
                     activity.addItems(newList);
-                    if(activity.isRefresh){
+                    if (activity.isRefresh) {
                         activity.isRefresh = false;
                         activity.mRecyclerView.refreshComplete();
                     }
@@ -187,8 +195,8 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
                     activity.notifyDataSetChanged();
                     break;
                 case -3:
-                    ToastUtil.showToast(EndlessLinearLayoutActivity.this,"网络错误");
-                    if(activity.isRefresh){
+                    ToastUtil.showToast(EndlessLinearLayoutActivity.this, "网络错误");
+                    if (activity.isRefresh) {
                         activity.isRefresh = false;
                         activity.mRecyclerView.refreshComplete();
                     }
@@ -210,7 +218,6 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
     };
 
 
-
     /**
      * 模拟请求网络
      */
@@ -228,7 +235,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
                 }
 
                 //模拟一下网络请求失败的情况
-                if(NetworkUtils.isNetAvailable(EndlessLinearLayoutActivity.this)) {
+                if (NetworkUtils.isNetAvailable(EndlessLinearLayoutActivity.this)) {
                     mHandler.sendEmptyMessage(-1);
                 } else {
                     mHandler.sendEmptyMessage(-3);

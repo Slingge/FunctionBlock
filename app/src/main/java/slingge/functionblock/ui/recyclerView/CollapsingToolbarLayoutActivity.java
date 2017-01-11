@@ -139,6 +139,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
                 ToastUtil.showToast(CollapsingToolbarLayoutActivity.this, dataList.get(position).title);
             }
         });
+
     }
 
 
@@ -221,7 +222,6 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
                     break;
             }
         }
-
     }
 
     @Override

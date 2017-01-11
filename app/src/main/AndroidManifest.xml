@@ -50,6 +50,15 @@
             android:name=".ui.recyclerView.CollapsingToolbarLayoutActivity"
             android:screenOrientation="portrait" />
 
+        <!--点击特效-->
+        <activity
+            android:name=".ui.specialEffects.ClickEffects"
+            android:screenOrientation="portrait" />
+        <!--水波纹效果-->
+        <activity
+            android:name=".ui.specialEffects.ListViewActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

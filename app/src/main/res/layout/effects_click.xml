@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slingge.functionblock.customView.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="普通"
+        android:textColor="#fff" />
+
+    <slingge.functionblock.view.ClickImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_list"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ListView水波纹效果"
+        android:textColor="#fff" />
+
+
+</slingge.functionblock.customView.FlowLayout>
