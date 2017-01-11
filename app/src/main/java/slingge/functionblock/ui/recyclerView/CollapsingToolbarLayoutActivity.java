@@ -4,7 +4,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.jdsjlzx.recyclerview.LRecyclerView;
 import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter;
@@ -18,12 +25,12 @@ import slingge.functionblock.R;
 import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.adapter.CollDataAdapter;
 import slingge.functionblock.ui.recyclerView.bean.ItemModel;
+import slingge.functionblock.ui.recyclerView.listener.RecyclerItemTouchListener;
 import slingge.functionblock.util.NetworkUtils;
-import slingge.functionblock.view.StatusBarUtil;
+import slingge.functionblock.util.ToastUtil;
 
 /**
  * 使用CoordinatorLayout协调者布局为根布局
- *
  * Created by Slingge on 2017/1/10 0010.
  */
 
@@ -51,14 +58,22 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
 
     private boolean isRefresh = false;
 
+    private ArrayList<ItemModel> dataList;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview_collapsing_toolbar_layout);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Winry Rockbell");
+        toolbar.setNavigationIcon(R.drawable.ic_back);
+        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         mRecyclerView = (LRecyclerView) findViewById(R.id.list);
-        ArrayList<ItemModel> dataList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        dataList = new ArrayList<>();
+        for (int i = 0; i < 15; i++) {
 
             ItemModel item = new ItemModel();
             item.id = i;
@@ -73,7 +88,8 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
         mLRecyclerViewAdapter = new LRecyclerViewAdapter(mDataAdapter);
         mRecyclerView.setAdapter(mLRecyclerViewAdapter);
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        mRecyclerView.setLayoutManager( new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
         mRecyclerView.setLScrollListener(new LRecyclerView.LScrollListener() {
             @Override
@@ -108,16 +124,21 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
                 } else {
                     //the end
                     RecyclerViewStateUtils.setFooterViewState(CollapsingToolbarLayoutActivity.this, mRecyclerView, REQUEST_COUNT, LoadingFooter.State.TheEnd, null);
-
                 }
             }
 
             @Override
-            public void onScrolled(int distanceX, int distanceY) {
-
+            public void onScrolled(int distanceX, int distanceY) {//RecyclerView滑动的距离
+//                ToastUtil.showToast(CollapsingToolbarLayoutActivity.this, distanceX + "," + distanceY);
             }
         });
-
+        mRecyclerView.addOnItemTouchListener(new RecyclerItemTouchListener(mRecyclerView) {
+            @Override
+            public void onItemClick(RecyclerView.ViewHolder vh) {
+                int position = vh.getAdapterPosition() - 1;
+                ToastUtil.showToast(CollapsingToolbarLayoutActivity.this, dataList.get(position).title);
+            }
+        });
     }
 
 
@@ -175,9 +196,10 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
                         }
                         ItemModel item = new ItemModel();
                         item.id = currentSize + i;
-                        item.title = "item" + (item.id);
+                        item.title = "Winry Rockbell" + (item.id);
                         newList.add(item);
                     }
+                    dataList.addAll(newList);
                     activity.addItems(newList);
                     if (activity.isRefresh) {
                         activity.isRefresh = false;
@@ -202,6 +224,13 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return true;
+    }
 
     private void notifyDataSetChanged() {
         mLRecyclerViewAdapter.notifyDataSetChanged();

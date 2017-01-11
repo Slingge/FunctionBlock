@@ -6,5 +6,4 @@
         android:id="@+id/menu_refresh"
         android:title="强制刷新"
         app:showAsAction="always|withText" />
-
 </menu>
