@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.github.jdsjlzx.recyclerview.LRecyclerView;
 import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter;
 import com.github.jdsjlzx.util.RecyclerViewStateUtils;
+import com.github.jdsjlzx.util.RecyclerViewUtils;
 import com.github.jdsjlzx.view.LoadingFooter;
 
 import java.lang.ref.WeakReference;
@@ -26,8 +27,11 @@ import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.adapter.CollDataAdapter;
 import slingge.functionblock.ui.recyclerView.bean.ItemModel;
 import slingge.functionblock.ui.recyclerView.listener.RecyclerItemTouchListener;
+import slingge.functionblock.ui.recyclerView.weight.SampleFooter;
 import slingge.functionblock.util.NetworkUtils;
 import slingge.functionblock.util.ToastUtil;
+
+import static slingge.functionblock.R.id.toolbar;
 
 /**
  * 使用CoordinatorLayout协调者布局为根布局
@@ -69,7 +73,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
         toolbar.setTitle("Winry Rockbell");
         toolbar.setNavigationIcon(R.drawable.ic_back);
         setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mRecyclerView = (LRecyclerView) findViewById(R.id.list);
         dataList = new ArrayList<>();
@@ -90,6 +94,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
 
 //        mRecyclerView.setLayoutManager( new LinearLayoutManager(this));
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+//        RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
 
         mRecyclerView.setLScrollListener(new LRecyclerView.LScrollListener() {
             @Override

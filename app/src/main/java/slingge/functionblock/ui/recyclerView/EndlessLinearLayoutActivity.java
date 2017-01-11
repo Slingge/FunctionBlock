@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -78,7 +79,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
             ItemModel item = new ItemModel();
             item.id = i;
             item.title = "item" + i;
-            //dataList.add(item);
+//            dataList.add(item);
         }
         mCurrentCounter = dataList.size();
         mDataAdapter = new DataAdapter(this);
@@ -91,8 +92,11 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         mRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
         mRecyclerView.setArrowImageView(R.drawable.ic_pulltorefresh_arrow);
 
-        RecyclerViewUtils.setHeaderView(mRecyclerView, new SampleHeader(this));
-        RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
+        SampleHeader sampleHeader=new SampleHeader(this);
+        RecyclerViewUtils.setHeaderView(mRecyclerView, sampleHeader);
+       ImageView image= (ImageView) sampleHeader.findViewById(R.id.image);
+        image.setImageResource(R.drawable.ic_bg2);
+//        RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
 
         mRecyclerView.setLScrollListener(new LRecyclerView.LScrollListener() {
             @Override
