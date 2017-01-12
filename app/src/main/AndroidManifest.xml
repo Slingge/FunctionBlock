@@ -60,7 +60,8 @@
             android:screenOrientation="portrait" />
 
         <!--侧滑-->
-        <activity android:name=".ui.sideslip.SideslipMainActivity"/>
+        <activity android:name=".ui.sideslip.SideslipMainActivity"
+            android:screenOrientation="portrait"/>
 
 
     </application>

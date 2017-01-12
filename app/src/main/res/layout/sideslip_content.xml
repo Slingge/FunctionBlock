@@ -23,13 +23,14 @@
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabSelectedTextColor="@color/AsukaColor"
+                app:tabSelectedTextColor="@color/violet"
                 app:tabTextColor="@color/white"
                 app:tabGravity="fill"/>
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
@@ -43,6 +44,7 @@
         android:src="@drawable/ic_ab1"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/floatbutton"
         />
 
 </android.support.design.widget.CoordinatorLayout>
