@@ -4,6 +4,14 @@
     android:layout_height="48dp"
     android:background="@color/AsukaColor">
 
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:id="@+id/image_back"
+        android:src="@drawable/ic_back"
+        android:scaleType="centerInside"
+        />
+
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"

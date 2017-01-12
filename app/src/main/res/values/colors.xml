@@ -32,7 +32,7 @@
     <!--输入框下划线颜色-->
     <color name="lint_bg_gray">#CDCDCD</color>
     <!--主题色-->
-    <color name="AsukaColor">#FF0000</color>
+    <color name="AsukaColor">#b50220</color>
     <!--青紫色-->
     <color name="violet">#6950a1</color>
     <!--朱色-->

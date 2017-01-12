@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <group
+        android:checkableBehavior="single"
+        android:title="home item">
+
+        <item
+            android:id="@+id/tv_1"
+            android:icon="@drawable/ic_ab1"
+            android:title="Asuka" />
+
+        <item
+            android:id="@+id/tv_2"
+            android:icon="@drawable/ic_bg2"
+            android:title="Asuka" />
+
+    </group>
+
+    <item android:title="菜单">
+
+        <menu>
+
+            <item
+                android:id="@+id/sub_exit"
+                android:title="退出应用" />
+
+        </menu>
+
+    </item>
+
+
+</menu>

@@ -30,6 +30,7 @@ import slingge.functionblock.ui.recyclerView.listener.RecyclerItemTouchListener;
 import slingge.functionblock.ui.recyclerView.weight.SampleFooter;
 import slingge.functionblock.util.NetworkUtils;
 import slingge.functionblock.util.ToastUtil;
+import slingge.functionblock.view.StatusBarUtil;
 
 import static slingge.functionblock.R.id.toolbar;
 
@@ -73,7 +74,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
         toolbar.setTitle("Winry Rockbell");
         toolbar.setNavigationIcon(R.drawable.ic_back);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左上角图标是否可以点击
 
         mRecyclerView = (LRecyclerView) findViewById(R.id.list);
         dataList = new ArrayList<>();

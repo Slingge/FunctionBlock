@@ -1,7 +1,6 @@
 package slingge.functionblock.ui;
 
 import android.content.Intent;
-import android.media.effect.Effect;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -9,6 +8,7 @@ import android.widget.TextView;
 import slingge.functionblock.R;
 import slingge.functionblock.ui.layout.LayoutViewActivity;
 import slingge.functionblock.ui.recyclerView.RecyclerViewActivity;
+import slingge.functionblock.ui.sideslip.SideslipMainActivity;
 import slingge.functionblock.ui.specialEffects.ClickEffects;
 
 public class MainActivity extends SlinggeActivity implements View.OnClickListener {
@@ -27,6 +27,8 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
         tv_recyclerView.setOnClickListener(this);
         TextView tv_effects = (TextView) findViewById(R.id.tv_effects);
         tv_effects.setOnClickListener(this);
+        TextView tv_slid = (TextView) findViewById(R.id.tv_slid);
+        tv_slid.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +42,9 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
                 break;
             case R.id.tv_effects:
                 startActivity(new Intent(this, ClickEffects.class));
+                break;
+            case R.id.tv_slid:
+                startActivity(new Intent(this, SideslipMainActivity.class));
                 break;
         }
     }

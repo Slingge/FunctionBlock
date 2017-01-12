@@ -15,7 +15,7 @@
         android:id="@+id/tv_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000"
+        android:background="@color/AsukaColor"
         android:gravity="center"
         android:padding="10dp"
         android:text="布局View"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@color/black"
+        android:background="@color/AsukaColor"
         android:gravity="center"
         android:padding="10dp"
         android:text="RecyclerView"
@@ -39,10 +39,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="@color/black"
+        android:background="@color/AsukaColor"
         android:gravity="center"
         android:padding="10dp"
         android:text="点击特效"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_slid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/AsukaColor"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="侧滑"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
