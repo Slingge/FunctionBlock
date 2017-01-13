@@ -48,21 +48,21 @@ public class SideslipMainActivity extends SlinggeActivity {
         initView();
         initToolbar();
         initTabLayout();
-        StatusBarUtil.translucentBar(this);
-
+//        StatusBarUtil.translucentBar(this);
     }
 
     private void initToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Winry Rockbell");
+        toolbar.setTitle("Asuka");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         toolbar.setNavigationIcon(R.drawable.ic_back);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);//true显示title
     }
 
     /**
      * 打开侧菜单
-     * */
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -76,7 +76,7 @@ public class SideslipMainActivity extends SlinggeActivity {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     private void initView() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        tabLayout= (TabLayout) findViewById(R.id.tabs);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);//悬浮按钮
         fab.setOnClickListener(new View.OnClickListener() {
@@ -127,19 +127,61 @@ public class SideslipMainActivity extends SlinggeActivity {
         tabLayout.addTab(tabLayout.newTab().setText(tabList.get(0)));//添加tab选项卡
         tabLayout.addTab(tabLayout.newTab().setText(tabList.get(1)));
         tabLayout.addTab(tabLayout.newTab().setText(tabList.get(2)));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab4"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab5"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab6"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab7"));
+        tabLayout.addTab(tabLayout.newTab().setText(tabList.get(3)));
+        tabLayout.addTab(tabLayout.newTab().setText(tabList.get(4)));
+        tabLayout.addTab(tabLayout.newTab().setText(tabList.get(5)));
+        tabLayout.addTab(tabLayout.newTab().setText(tabList.get(6)));
 
         List<Fragment> fragmentList = new ArrayList<>();
-        for (int i = 0; i < tabList.size(); i++) {
+        Fragment f0 = new TabFragment0();
+        Bundle bundle = new Bundle();
+        bundle.putString("content", "0");
+        f0.setArguments(bundle);
+        fragmentList.add(f0);
+
+        Fragment f1 = new TabFragment1();
+        bundle = new Bundle();
+        bundle.putString("content", "1");
+        f1.setArguments(bundle);
+        fragmentList.add(f1);
+
+        Fragment f2 = new TabFragment2();
+        bundle = new Bundle();
+        bundle.putString("content", "2");
+        f2.setArguments(bundle);
+        fragmentList.add(f2);
+
+        Fragment f3 = new TabFragment3();
+        bundle = new Bundle();
+        bundle.putString("content", "3");
+        f3.setArguments(bundle);
+        fragmentList.add(f3);
+
+        Fragment f4 = new TabFragment4();
+        bundle = new Bundle();
+        bundle.putString("content", "4");
+        f4.setArguments(bundle);
+        fragmentList.add(f4);
+
+        Fragment f5 = new TabFragment5();
+        bundle = new Bundle();
+        bundle.putString("content", "5");
+        f5.setArguments(bundle);
+        fragmentList.add(f5);
+
+        Fragment f6 = new TabFragment6();
+        bundle = new Bundle();
+        bundle.putString("content", "6");
+        f6.setArguments(bundle);
+        fragmentList.add(f6);
+
+       /* for (int i = 0; i < tabList.size(); i++) {
             Fragment f1 = new TabFragment();
             Bundle bundle = new Bundle();
-            bundle.putString("content", "http://blog.csdn.net/feiduclear_up \n CSDN 废墟的树");
+            bundle.putString("content", i+"");
             f1.setArguments(bundle);
             fragmentList.add(f1);
-        }
+        }*/
 
         TabFragmentAdapter fragmentAdapter = new TabFragmentAdapter(getSupportFragmentManager(), fragmentList, tabList);
         viewPager.setAdapter(fragmentAdapter);//给ViewPager设置适配器

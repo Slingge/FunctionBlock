@@ -13,18 +13,15 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import slingge.functionblock.R;
 import slingge.functionblock.util.ToastUtil;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 /**
  * Created by Slingge on 2017/1/12 0012.
  */
 
-public class TabFragment extends Fragment {
+public class TabFragment0 extends LazyFragment {
 
     private String content;
     private View view;
@@ -33,29 +30,28 @@ public class TabFragment extends Fragment {
     private List<ModelBean> beanList;
     private RecyclerAdapter adapter;
 
-    private String des[] = {"寒霜3", "EVA-01", "Asuka", "KO Kotobuki Tsumugi", "破 Asuka"
-            , "su-30", "su-35", "Z1", "Eva-01", "COD10", "COD6"};
+    private String des[] = {"Asuka", "寒霜3", "EVA-01", "COD6", "Eva-01", "su-30", "KO Kotobuki Tsumugi", "su-35"
+            , "Z1", "COD10", "破 Asuka"};
 
-    private int resId[] = {R.drawable.ic_item1, R.drawable.ic_item2, R.drawable.ic_item3, R.drawable.ic_item4,
-            R.drawable.ic_item5, R.drawable.ic_item6, R.drawable.ic_item7, R.drawable.ic_item8, R.drawable.ic_item9,
-            R.drawable.ic_item10, R.drawable.ic_item11,};
+    private int resId[] = {R.drawable.ic_item5, R.drawable.ic_item6, R.drawable.ic_item11, R.drawable.ic_item10, R.drawable.ic_item4,
+            R.drawable.ic_item2, R.drawable.ic_item7, R.drawable.ic_item8, R.drawable.ic_item9, R.drawable.ic_item3, R.drawable.ic_item1,
+    };
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.sidleslip_tabfragment, container, false);
-        return view;
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         content = getArguments().getString("content");
-        ToastUtil.showToast(getActivity(), content);
-        Log.e("content...............", content);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        return view;
+    }
+
+
+    @Override
+    public void loadData() {
+        ToastUtil.showToast(getActivity(), content);
         initData();
     }
 
@@ -77,4 +73,6 @@ public class TabFragment extends Fragment {
             }
         });
     }
+
+
 }

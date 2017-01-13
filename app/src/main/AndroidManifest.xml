@@ -59,9 +59,10 @@
             android:name=".ui.specialEffects.ListViewActivity"
             android:screenOrientation="portrait" />
 
-        <!--侧滑-->
-        <activity android:name=".ui.sideslip.SideslipMainActivity"
-            android:screenOrientation="portrait"/>
+        <!--侧滑--><!--硬件加速-->
+        <activity
+            android:name=".ui.sideslip.SideslipMainActivity"
+            android:screenOrientation="portrait" />
 
 
     </application>
