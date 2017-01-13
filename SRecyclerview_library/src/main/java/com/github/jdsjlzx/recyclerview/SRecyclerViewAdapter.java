@@ -18,7 +18,7 @@ import java.util.List;
  * RecyclerView.Adapter with Header and Footer
  * 
  */
-public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class SRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private static final int TYPE_REFRESH_HEADER = 10000;
     private static final int TYPE_NORMAL = 0;
@@ -36,7 +36,7 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     private ArrayList<View> mHeaderViews = new ArrayList<>();
     private ArrayList<View> mFooterViews = new ArrayList<>();
 
-    public LRecyclerViewAdapter(RecyclerView.Adapter innerAdapter) {
+    public SRecyclerViewAdapter(RecyclerView.Adapter innerAdapter) {
         this.mInnerAdapter = innerAdapter;
     }
 

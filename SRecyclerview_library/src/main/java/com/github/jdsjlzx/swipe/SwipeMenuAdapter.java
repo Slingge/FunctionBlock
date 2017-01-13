@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import com.github.jdsjlzx.R;
 import com.github.jdsjlzx.interfaces.OnSwipeMenuItemClickListener;
 import com.github.jdsjlzx.interfaces.SwipeMenuCreator;
-import com.github.jdsjlzx.recyclerview.LRecyclerView;
+import com.github.jdsjlzx.recyclerview.SRecyclerView;
 
 import java.util.List;
 
@@ -56,14 +56,14 @@ public abstract class SwipeMenuAdapter<VH extends RecyclerView.ViewHolder> exten
             int leftMenuCount = swipeLeftMenu.getMenuItems().size();
             if (leftMenuCount > 0) {
                 SwipeMenuView swipeLeftMenuView = (SwipeMenuView) swipeMenuLayout.findViewById(R.id.swipe_left);
-                swipeLeftMenuView.bindMenu(swipeLeftMenu, LRecyclerView.LEFT_DIRECTION);
+                swipeLeftMenuView.bindMenu(swipeLeftMenu, SRecyclerView.LEFT_DIRECTION);
                 swipeLeftMenuView.bindMenuItemClickListener(mSwipeMenuItemClickListener, swipeMenuLayout);
             }
 
             int rightMenuCount = swipeRightMenu.getMenuItems().size();
             if (rightMenuCount > 0) {
                 SwipeMenuView swipeRightMenuView = (SwipeMenuView) swipeMenuLayout.findViewById(R.id.swipe_right);
-                swipeRightMenuView.bindMenu(swipeRightMenu, LRecyclerView.RIGHT_DIRECTION);
+                swipeRightMenuView.bindMenu(swipeRightMenu, SRecyclerView.RIGHT_DIRECTION);
                 swipeRightMenuView.bindMenuItemClickListener(mSwipeMenuItemClickListener, swipeMenuLayout);
             }
 

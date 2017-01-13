@@ -13,12 +13,12 @@ import android.util.Log;
 public class ExStaggeredGridLayoutManager extends StaggeredGridLayoutManager {
 
     private final String TAG = getClass().getSimpleName();
-    private LRecyclerViewAdapter mLRecyclerViewAdapter = null;
+    private SRecyclerViewAdapter mSRecyclerViewAdapter = null;
     GridLayoutManager.SpanSizeLookup mSpanSizeLookup;
 
-    public ExStaggeredGridLayoutManager(int spanCount, int orientation,LRecyclerViewAdapter adapter) {
+    public ExStaggeredGridLayoutManager(int spanCount, int orientation,SRecyclerViewAdapter adapter) {
         super(spanCount, orientation);
-        this.mLRecyclerViewAdapter = adapter;
+        this.mSRecyclerViewAdapter = adapter;
     }
 
     /**
@@ -43,7 +43,7 @@ public class ExStaggeredGridLayoutManager extends StaggeredGridLayoutManager {
 
     @Override
     public void onMeasure(RecyclerView.Recycler recycler, RecyclerView.State state, int widthSpec, int heightSpec) {
-        int itemCount = mLRecyclerViewAdapter.getItemCount();
+        int itemCount = mSRecyclerViewAdapter.getItemCount();
         for (int i = 0; i < itemCount; i++) {
             Log.d(TAG, "lookup  i = " + i + " itemCount = " + itemCount);
             Log.e(TAG,"mSpanSizeLookup.getSpanSize(i) " + mSpanSizeLookup.getSpanSize(i));

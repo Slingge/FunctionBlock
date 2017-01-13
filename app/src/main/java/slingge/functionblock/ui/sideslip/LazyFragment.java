@@ -1,11 +1,7 @@
 package slingge.functionblock.ui.sideslip;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 
 /**
@@ -46,9 +42,11 @@ public abstract class LazyFragment extends Fragment {
         if (isVisibleToUser && isViewInitiated && (!isDataInitiated || forceUpdate)) {
             loadData();
             isDataInitiated = true;
-            refreshData = false;
+            refreshData = true;//true,只加载一次，false每次进入页面都加载
             return true;
         }
         return false;
     }
+
+
 }

@@ -3,14 +3,14 @@ package com.github.jdsjlzx.util;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.github.jdsjlzx.recyclerview.LuRecyclerViewAdapter;
+import com.github.jdsjlzx.recyclerview.SuRecyclerViewAdapter;
 
 /**
  *
  * @author lizhixian
  * @time 16/9/10 09:54
  */
-public class LuRecyclerViewUtils {
+public class SuRecyclerViewUtils {
 
     /**
      * 设置HeaderView
@@ -21,12 +21,12 @@ public class LuRecyclerViewUtils {
     public static void setHeaderView(RecyclerView recyclerView, View view) {
         RecyclerView.Adapter outerAdapter = recyclerView.getAdapter();
 
-        if (outerAdapter == null || !(outerAdapter instanceof LuRecyclerViewAdapter)) {
+        if (outerAdapter == null || !(outerAdapter instanceof SuRecyclerViewAdapter)) {
             return;
         }
 
-        LuRecyclerViewAdapter luRecyclerViewAdapter = (LuRecyclerViewAdapter) outerAdapter;
-        luRecyclerViewAdapter.addHeaderView(view);
+        SuRecyclerViewAdapter suRecyclerViewAdapter = (SuRecyclerViewAdapter) outerAdapter;
+        suRecyclerViewAdapter.addHeaderView(view);
     }
 
     /**
@@ -38,16 +38,16 @@ public class LuRecyclerViewUtils {
     public static void setFooterView(RecyclerView recyclerView, View view) {
         RecyclerView.Adapter outerAdapter = recyclerView.getAdapter();
 
-        if (outerAdapter == null || !(outerAdapter instanceof LuRecyclerViewAdapter)) {
+        if (outerAdapter == null || !(outerAdapter instanceof SuRecyclerViewAdapter)) {
             return;
         }
 
-        LuRecyclerViewAdapter luRecyclerViewAdapter = (LuRecyclerViewAdapter) outerAdapter;
+        SuRecyclerViewAdapter suRecyclerViewAdapter = (SuRecyclerViewAdapter) outerAdapter;
 
-        if (luRecyclerViewAdapter.getFooterViewsCount() > 0) {
-            luRecyclerViewAdapter.removeFooterView(luRecyclerViewAdapter.getFooterView());
+        if (suRecyclerViewAdapter.getFooterViewsCount() > 0) {
+            suRecyclerViewAdapter.removeFooterView(suRecyclerViewAdapter.getFooterView());
         }
-        luRecyclerViewAdapter.addFooterView(view);
+        suRecyclerViewAdapter.addFooterView(view);
     }
 
     /**
@@ -59,12 +59,12 @@ public class LuRecyclerViewUtils {
 
         RecyclerView.Adapter outerAdapter = recyclerView.getAdapter();
 
-        if (outerAdapter != null && outerAdapter instanceof LuRecyclerViewAdapter) {
+        if (outerAdapter != null && outerAdapter instanceof SuRecyclerViewAdapter) {
 
-            int footerViewCounter = ((LuRecyclerViewAdapter) outerAdapter).getFooterViewsCount();
+            int footerViewCounter = ((SuRecyclerViewAdapter) outerAdapter).getFooterViewsCount();
             if (footerViewCounter > 0) {
-                View footerView = ((LuRecyclerViewAdapter) outerAdapter).getFooterView();
-                ((LuRecyclerViewAdapter) outerAdapter).removeFooterView(footerView);
+                View footerView = ((SuRecyclerViewAdapter) outerAdapter).getFooterView();
+                ((SuRecyclerViewAdapter) outerAdapter).removeFooterView(footerView);
             }
         }
     }
@@ -78,12 +78,12 @@ public class LuRecyclerViewUtils {
 
         RecyclerView.Adapter outerAdapter = recyclerView.getAdapter();
 
-        if (outerAdapter != null && outerAdapter instanceof LuRecyclerViewAdapter) {
+        if (outerAdapter != null && outerAdapter instanceof SuRecyclerViewAdapter) {
 
-            int headerViewCounter = ((LuRecyclerViewAdapter) outerAdapter).getHeaderViewsCount();
+            int headerViewCounter = ((SuRecyclerViewAdapter) outerAdapter).getHeaderViewsCount();
             if (headerViewCounter > 0) {
-                View headerView = ((LuRecyclerViewAdapter) outerAdapter).getHeaderView();
-                ((LuRecyclerViewAdapter) outerAdapter).removeHeaderView(headerView);
+                View headerView = ((SuRecyclerViewAdapter) outerAdapter).getHeaderView();
+                ((SuRecyclerViewAdapter) outerAdapter).removeHeaderView(headerView);
             }
         }
     }
@@ -97,9 +97,9 @@ public class LuRecyclerViewUtils {
      */
     public static int getLayoutPosition(RecyclerView recyclerView, RecyclerView.ViewHolder holder) {
         RecyclerView.Adapter outerAdapter = recyclerView.getAdapter();
-        if (outerAdapter != null && outerAdapter instanceof LuRecyclerViewAdapter) {
+        if (outerAdapter != null && outerAdapter instanceof SuRecyclerViewAdapter) {
 
-            int headerViewCounter = ((LuRecyclerViewAdapter) outerAdapter).getHeaderViewsCount();
+            int headerViewCounter = ((SuRecyclerViewAdapter) outerAdapter).getHeaderViewsCount();
             if (headerViewCounter > 0) {
                 return holder.getLayoutPosition() - headerViewCounter;
             }
@@ -117,9 +117,9 @@ public class LuRecyclerViewUtils {
      */
     public static int getAdapterPosition(RecyclerView recyclerView, RecyclerView.ViewHolder holder) {
         RecyclerView.Adapter outerAdapter = recyclerView.getAdapter();
-        if (outerAdapter != null && outerAdapter instanceof LuRecyclerViewAdapter) {
+        if (outerAdapter != null && outerAdapter instanceof SuRecyclerViewAdapter) {
 
-            int headerViewCounter = ((LuRecyclerViewAdapter) outerAdapter).getHeaderViewsCount();
+            int headerViewCounter = ((SuRecyclerViewAdapter) outerAdapter).getHeaderViewsCount();
             if (headerViewCounter > 0) {
                 return holder.getAdapterPosition() - headerViewCounter;
             }

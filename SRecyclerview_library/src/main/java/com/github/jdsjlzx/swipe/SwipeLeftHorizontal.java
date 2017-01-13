@@ -3,12 +3,12 @@ package com.github.jdsjlzx.swipe;
 import android.view.View;
 import android.widget.OverScroller;
 
-import com.github.jdsjlzx.recyclerview.LRecyclerView;
+import com.github.jdsjlzx.recyclerview.SRecyclerView;
 
 class SwipeLeftHorizontal extends SwipeHorizontal {
 
     public SwipeLeftHorizontal(View menuView) {
-        super(LRecyclerView.LEFT_DIRECTION, menuView);
+        super(SRecyclerView.LEFT_DIRECTION, menuView);
     }
 
     @Override

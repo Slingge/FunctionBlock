@@ -4,19 +4,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.github.jdsjlzx.recyclerview.LRecyclerView;
-import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter;
+import com.github.jdsjlzx.recyclerview.SRecyclerView;
+import com.github.jdsjlzx.recyclerview.SRecyclerViewAdapter;
 import com.github.jdsjlzx.util.RecyclerViewStateUtils;
-import com.github.jdsjlzx.util.RecyclerViewUtils;
 import com.github.jdsjlzx.view.LoadingFooter;
 
 import java.lang.ref.WeakReference;
@@ -27,12 +22,8 @@ import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.adapter.CollDataAdapter;
 import slingge.functionblock.ui.recyclerView.bean.ItemModel;
 import slingge.functionblock.ui.recyclerView.listener.RecyclerItemTouchListener;
-import slingge.functionblock.ui.recyclerView.weight.SampleFooter;
 import slingge.functionblock.util.NetworkUtils;
 import slingge.functionblock.util.ToastUtil;
-import slingge.functionblock.view.StatusBarUtil;
-
-import static slingge.functionblock.R.id.toolbar;
 
 /**
  * 使用CoordinatorLayout协调者布局为根布局
@@ -55,10 +46,10 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
     private static int mCurrentCounter = 0;
 
 
-    private LRecyclerView mRecyclerView = null;
+    private SRecyclerView mRecyclerView = null;
     private CollDataAdapter mDataAdapter = null;
 
-    private LRecyclerViewAdapter mLRecyclerViewAdapter = null;
+    private SRecyclerViewAdapter mSRecyclerViewAdapter = null;
     private PreviewHandler mHandler = new PreviewHandler(this);
 
     private boolean isRefresh = false;
@@ -76,7 +67,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左上角图标是否可以点击
 
-        mRecyclerView = (LRecyclerView) findViewById(R.id.list);
+        mRecyclerView = (SRecyclerView) findViewById(R.id.list);
         dataList = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
 
@@ -90,14 +81,14 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
         mDataAdapter = new CollDataAdapter(this);
         mDataAdapter.addAll(dataList);
 
-        mLRecyclerViewAdapter = new LRecyclerViewAdapter(mDataAdapter);
-        mRecyclerView.setAdapter(mLRecyclerViewAdapter);
+        mSRecyclerViewAdapter = new SRecyclerViewAdapter(mDataAdapter);
+        mRecyclerView.setAdapter(mSRecyclerViewAdapter);
 
 //        mRecyclerView.setLayoutManager( new LinearLayoutManager(this));
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 //        RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
 
-        mRecyclerView.setLScrollListener(new LRecyclerView.LScrollListener() {
+        mRecyclerView.setLScrollListener(new SRecyclerView.LScrollListener() {
             @Override
             public void onRefresh() {
                 RecyclerViewStateUtils.setFooterViewState(mRecyclerView, LoadingFooter.State.Normal);
@@ -239,7 +230,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
     }
 
     private void notifyDataSetChanged() {
-        mLRecyclerViewAdapter.notifyDataSetChanged();
+        mSRecyclerViewAdapter.notifyDataSetChanged();
     }
 
     private void addItems(ArrayList<ItemModel> list) {

@@ -17,8 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.jdsjlzx.recyclerview.LRecyclerView;
-import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter;
+import com.github.jdsjlzx.recyclerview.SRecyclerView;
+import com.github.jdsjlzx.recyclerview.SRecyclerViewAdapter;
 import com.github.jdsjlzx.recyclerview.ProgressStyle;
 import com.github.jdsjlzx.util.RecyclerViewStateUtils;
 import com.github.jdsjlzx.util.RecyclerViewUtils;
@@ -31,7 +31,6 @@ import slingge.functionblock.R;
 import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.adapter.ListBaseAdapter;
 import slingge.functionblock.ui.recyclerView.bean.ItemModel;
-import slingge.functionblock.ui.recyclerView.weight.SampleFooter;
 import slingge.functionblock.ui.recyclerView.weight.SampleHeader;
 import slingge.functionblock.util.NetworkUtils;
 import slingge.functionblock.util.ToastUtil;
@@ -57,10 +56,10 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
      */
     private static int mCurrentCounter = 0;
 
-    private LRecyclerView mRecyclerView = null;
+    private SRecyclerView mRecyclerView = null;
     private DataAdapter mDataAdapter = null;
     private PreviewHandler mHandler = new PreviewHandler(this);
-    private LRecyclerViewAdapter mLRecyclerViewAdapter = null;
+    private SRecyclerViewAdapter mSRecyclerViewAdapter = null;
 
     private boolean isRefresh = false;
 
@@ -72,7 +71,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        mRecyclerView = (LRecyclerView) findViewById(R.id.list);
+        mRecyclerView = (SRecyclerView) findViewById(R.id.list);
 
         ArrayList<ItemModel> dataList = new ArrayList<>();
         for (int i = 0; i < 11; i++) {
@@ -85,8 +84,8 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         mDataAdapter = new DataAdapter(this);
         mDataAdapter.addAll(dataList);
 
-        mLRecyclerViewAdapter = new LRecyclerViewAdapter(mDataAdapter);
-        mRecyclerView.setAdapter(mLRecyclerViewAdapter);
+        mSRecyclerViewAdapter = new SRecyclerViewAdapter(mDataAdapter);
+        mRecyclerView.setAdapter(mSRecyclerViewAdapter);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
@@ -98,12 +97,12 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         image.setImageResource(R.drawable.ic_bg2);
 //        RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
 
-        mRecyclerView.setLScrollListener(new LRecyclerView.LScrollListener() {
+        mRecyclerView.setLScrollListener(new SRecyclerView.LScrollListener() {
             @Override
             public void onRefresh() {
                 RecyclerViewStateUtils.setFooterViewState(mRecyclerView, LoadingFooter.State.Normal);
                 mDataAdapter.clear();
-                mLRecyclerViewAdapter.notifyDataSetChanged();//fix bug:crapped or attached views may not be recycled. isScrap:false isAttached:true
+                mSRecyclerViewAdapter.notifyDataSetChanged();//fix bug:crapped or attached views may not be recycled. isScrap:false isAttached:true
                 mCurrentCounter = 0;
                 isRefresh = true;
                 requestData();
@@ -147,7 +146,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
 
 
     private void notifyDataSetChanged() {
-        mLRecyclerViewAdapter.notifyDataSetChanged();
+        mSRecyclerViewAdapter.notifyDataSetChanged();
     }
 
     private void addItems(ArrayList<ItemModel> list) {

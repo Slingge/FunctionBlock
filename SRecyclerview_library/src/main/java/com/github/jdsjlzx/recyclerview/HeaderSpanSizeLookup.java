@@ -10,10 +10,10 @@ import android.support.v7.widget.GridLayoutManager;
  */
 public class HeaderSpanSizeLookup extends GridLayoutManager.SpanSizeLookup {
 
-    private LRecyclerViewAdapter adapter;
+    private SRecyclerViewAdapter adapter;
     private int mSpanSize = 1;
 
-    public HeaderSpanSizeLookup(LRecyclerViewAdapter adapter, int spanSize) {
+    public HeaderSpanSizeLookup(SRecyclerViewAdapter adapter, int spanSize) {
         this.adapter = adapter;
         this.mSpanSize = spanSize;
     }
