@@ -42,7 +42,7 @@ public abstract class LazyFragment extends Fragment {
         if (isVisibleToUser && isViewInitiated && (!isDataInitiated || forceUpdate)) {
             loadData();
             isDataInitiated = true;
-            refreshData = true;//true,只加载一次，false每次进入页面都加载
+            refreshData = true;//false,只加载一次，true每次进入页面都加载
             return true;
         }
         return false;

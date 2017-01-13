@@ -45,18 +45,21 @@ public class TabFragment0 extends LazyFragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
         return view;
     }
 
 
     @Override
     public void loadData() {
+
         ToastUtil.showToast(getActivity(), content);
         initData();
     }
 
 
     private void initData() {
+
         beanList = new ArrayList<>();
         for (int i = 0; i < resId.length; i++) {
             ModelBean bean = new ModelBean();

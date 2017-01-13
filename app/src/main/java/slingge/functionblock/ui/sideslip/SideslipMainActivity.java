@@ -114,13 +114,13 @@ public class SideslipMainActivity extends SlinggeActivity {
     private void initTabLayout() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         List<String> tabList = new ArrayList<>();
-        tabList.add("Tab1");
+        tabList.add("Tab  1");
         tabList.add("Tab2");
         tabList.add("Tab3");
-        tabList.add("Tab4");
+        tabList.add("Tab 4");
         tabList.add("Tab5");
-        tabList.add("Tab6");
-        tabList.add("Tab7");
+        tabList.add("Tab   6");
+        tabList.add("Tab       7");
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);//设置tab模式，当前为系统默认模式
         //此处代码设置无效，不知道为啥？？？xml属性是可以的
 //        tabLayout.setTabTextColors(android.R.color.white, android.R.color.holo_red_dark);//设置TabLayout两种状态
@@ -182,12 +182,10 @@ public class SideslipMainActivity extends SlinggeActivity {
             f1.setArguments(bundle);
             fragmentList.add(f1);
         }*/
-
         TabFragmentAdapter fragmentAdapter = new TabFragmentAdapter(getSupportFragmentManager(), fragmentList, tabList);
         viewPager.setAdapter(fragmentAdapter);//给ViewPager设置适配器
         tabLayout.setupWithViewPager(viewPager);//将TabLayout和ViewPager关联起来。
         tabLayout.setTabsFromPagerAdapter(fragmentAdapter);//给Tabs设置适配器
-
     }
 
 
