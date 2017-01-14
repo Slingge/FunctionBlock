@@ -95,17 +95,17 @@ public class SideslipMainActivity extends SlinggeActivity {
         });
         //左侧菜单
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigationView);
-//        ImageView image_bg = (ImageView) findViewById(R.id.image_bg);
-//
-//        image_bg.setImageBitmap(BlurBitmap.blur(this, BitmapFactory.decodeResource(getResources(), R.drawable.ic_bg2)));
-//        image_bg.setAlpha(Float.valueOf(100));//模糊效果，API17及以上
+        View headerView = navigationView.getHeaderView(0);
+        ImageView image_bg = (ImageView) headerView.findViewById(R.id.image_bg);
+        image_bg.setImageBitmap(BlurBitmap.blur(this, BitmapFactory.decodeResource(getResources(), R.drawable.ic_ab1)));
+        image_bg.setAlpha(Float.valueOf(100));//模糊效果，API17及以上
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override//左侧菜单监听
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
 //                    case R.id.
                 }
-
                 return false;
             }
         });
