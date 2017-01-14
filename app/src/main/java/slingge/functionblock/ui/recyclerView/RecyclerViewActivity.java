@@ -61,10 +61,9 @@ public class RecyclerViewActivity extends SlinggeActivity implements View.OnClic
     }
 
     public void select() {
-        SRecyclerView recyclerView = (SRecyclerView) LayoutInflater.from(this)
+        RecyclerView recyclerView = (RecyclerView) LayoutInflater.from(this)
                 .inflate(R.layout.bottomsheetdialog_list, null);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         Adapter adapter = new Adapter();
         recyclerView.setAdapter(adapter);
@@ -83,7 +82,6 @@ public class RecyclerViewActivity extends SlinggeActivity implements View.OnClic
 
     class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
 
-
         @Override
         public Adapter.Holder onCreateViewHolder(ViewGroup parent, int viewType) {
             View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.bottomsheetdialog_item, parent, false);
@@ -97,7 +95,7 @@ public class RecyclerViewActivity extends SlinggeActivity implements View.OnClic
 
         @Override
         public int getItemCount() {
-            return 50;
+            return 15;
         }
 
         class Holder extends RecyclerView.ViewHolder {
