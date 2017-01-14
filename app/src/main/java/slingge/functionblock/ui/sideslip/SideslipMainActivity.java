@@ -117,10 +117,10 @@ public class SideslipMainActivity extends SlinggeActivity {
         tabList.add("Tab  1");
         tabList.add("Tab2");
         tabList.add("Tab3");
-        tabList.add("Tab 4");
+        tabList.add("TabTab 4");
         tabList.add("Tab5");
-        tabList.add("Tab   6");
-        tabList.add("Tab       7");
+        tabList.add("Tab6");
+        tabList.add("Tab   TabTabTabTab    7");
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);//设置tab模式，当前为系统默认模式
         //此处代码设置无效，不知道为啥？？？xml属性是可以的
 //        tabLayout.setTabTextColors(android.R.color.white, android.R.color.holo_red_dark);//设置TabLayout两种状态
