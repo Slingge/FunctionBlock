@@ -72,7 +72,6 @@ public class SideslipMainActivity extends SlinggeActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     private void initView() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
