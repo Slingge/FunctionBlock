@@ -91,9 +91,9 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         mRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
         mRecyclerView.setArrowImageView(R.drawable.ic_pulltorefresh_arrow);
 
-        SampleHeader sampleHeader=new SampleHeader(this);
+        SampleHeader sampleHeader = new SampleHeader(this);
         RecyclerViewUtils.setHeaderView(mRecyclerView, sampleHeader);
-       ImageView image= (ImageView) sampleHeader.findViewById(R.id.image);
+        ImageView image = (ImageView) sampleHeader.findViewById(R.id.image);
         image.setImageResource(R.drawable.ic_bg2);
 //        RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
 
