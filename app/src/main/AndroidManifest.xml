@@ -22,6 +22,11 @@
             </intent-filter>
         </activity>
 
+        <!--动画View-->
+        <activity
+            android:name=".ui.animGraphical.GraphicalActivity"
+            android:screenOrientation="portrait" />
+
         <!--布局-->
         <activity
             android:name=".ui.layout.LayoutViewActivity"
