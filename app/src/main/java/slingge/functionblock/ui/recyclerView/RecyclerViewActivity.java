@@ -3,6 +3,7 @@ package slingge.functionblock.ui.recyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,8 +17,10 @@ import com.github.jdsjlzx.recyclerview.SRecyclerView;
 import com.github.jdsjlzx.recyclerview.ProgressStyle;
 
 import slingge.functionblock.R;
+import slingge.functionblock.customView.MyBottomSheetDialog;
 import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.listener.RecyclerItemTouchListener;
+import slingge.functionblock.util.ControlWidthHeight;
 import slingge.functionblock.util.ToastUtil;
 
 /**
@@ -68,9 +71,15 @@ public class RecyclerViewActivity extends SlinggeActivity implements View.OnClic
         Adapter adapter = new Adapter();
         recyclerView.setAdapter(adapter);
 
-        final BottomSheetDialog dialog = new BottomSheetDialog(this);
+        final MyBottomSheetDialog dialog = new MyBottomSheetDialog(this);
         dialog.setContentView(recyclerView);
         dialog.show();
+
+        View parent = (View) recyclerView.getParent();//设置自适应高度
+        BottomSheetBehavior behavior = BottomSheetBehavior.from(parent);
+        behavior.setPeekHeight(ControlWidthHeight.OutputView(recyclerView));
+
+
         recyclerView.addOnItemTouchListener(new RecyclerItemTouchListener(recyclerView) {
             @Override
             public void onItemClick(RecyclerView.ViewHolder vh) {
