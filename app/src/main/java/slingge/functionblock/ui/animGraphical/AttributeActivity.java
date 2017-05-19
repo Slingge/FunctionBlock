@@ -14,6 +14,7 @@ import slingge.functionblock.R;
  * 属性动画
  * alpha 控制透明度
  * rotation 旋转
+ * translationX 水平位移
  * Created by Slingge on 2017/5/18 0018.
  */
 
@@ -54,8 +55,9 @@ public class AttributeActivity extends AppCompatActivity implements View.OnClick
                 anim.start();
                 break;
             case R.id.but3:
-                float x = tv1.getTranslationX();
-                anim = new ObjectAnimator().ofFloat(tv1, "translationx", x, -500f, x);
+                float x = tv1.getTranslationX();//获取textView的translationX位置，第三个参数怎么移动
+                float y = tv1.getTranslationY();
+                anim = new ObjectAnimator().ofFloat(tv1, "translationY", 0, -500f, y);
                 anim.setDuration(5000);
                 anim.start();
                 break;

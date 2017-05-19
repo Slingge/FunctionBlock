@@ -24,6 +24,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:text="测试"
+                android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -52,6 +53,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="平移"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/but4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="缩放"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
