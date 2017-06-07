@@ -22,6 +22,11 @@
             </intent-filter>
         </activity>
 
+        <!--事件分发-->
+        <activity
+            android:name=".ui.eventDistribution.EventDistributionActivity"
+            android:screenOrientation="portrait" />
+
 
         <!--属性动画-->
         <activity
