@@ -40,4 +40,5 @@ public class GraphicalActivity extends SlinggeActivity implements View.OnClickLi
                 break;
         }
     }
+
 }

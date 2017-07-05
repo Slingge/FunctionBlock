@@ -64,6 +64,14 @@
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
+                <Button
+                    android:id="@+id/but5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="组合动画"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
             </slingge.functionblock.customView.FlowLayout>
 
 
