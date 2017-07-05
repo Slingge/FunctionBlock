@@ -30,6 +30,18 @@
             android:textColor="#000"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tv_constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/asukacolor_bg"
+            android:padding="10dp"
+            android:text="约束布局"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
     </slingge.functionblock.customView.FlowLayout>
 
 </LinearLayout>

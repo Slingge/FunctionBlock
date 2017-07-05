@@ -30,6 +30,8 @@ public class LayoutViewActivity extends SlinggeActivity implements View.OnClickL
 
         TextView tv_slidingbar_layout = (TextView) findViewById(R.id.tv_slidingbar_layout);
         tv_slidingbar_layout.setOnClickListener(this);
+        TextView tv_constraintLayout = (TextView) findViewById(R.id.tv_constraintLayout);
+        tv_constraintLayout.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +43,9 @@ public class LayoutViewActivity extends SlinggeActivity implements View.OnClickL
                 break;
             case R.id.tv_slidingbar_layout:
                 startActivity(new Intent(this, SlidingHideBarLayout.class));
+                break;
+            case R.id.tv_constraintLayout:
+                startActivity(new Intent(this, ConstraintLayout.class));
                 break;
         }
 
