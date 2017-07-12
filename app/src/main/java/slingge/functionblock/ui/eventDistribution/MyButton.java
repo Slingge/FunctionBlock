@@ -11,7 +11,7 @@ import android.widget.Button;
  * Created by Administrator on 2017/6/2 0002.
  */
 
-public class MyButton extends Button {
+public class MyButton extends android.support.v7.widget.AppCompatButton {
 
     private final String TAG = "MyButton";
 
@@ -45,4 +45,5 @@ public class MyButton extends Button {
         }
         return super.dispatchTouchEvent(event);
     }
+
 }

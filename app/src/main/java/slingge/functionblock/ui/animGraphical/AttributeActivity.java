@@ -4,10 +4,13 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.PointFEvaluator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -38,6 +41,8 @@ public class AttributeActivity extends AppCompatActivity implements View.OnClick
 
     private TextView tv1;
 
+    private MyAnimView myAnimView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +64,10 @@ public class AttributeActivity extends AppCompatActivity implements View.OnClick
         but4.setOnClickListener(this);
         Button but5 = (Button) findViewById(R.id.but5);
         but5.setOnClickListener(this);
+        Button but6 = (Button) findViewById(R.id.but6);
+        but6.setOnClickListener(this);
+
+        myAnimView = new MyAnimView(this);
     }
 
     @Override
@@ -70,7 +79,7 @@ public class AttributeActivity extends AppCompatActivity implements View.OnClick
                 anim.start();
                 break;
             case R.id.but2:
-                anim = new ObjectAnimator().ofFloat(tv1, "rotation", 0f, 360f);
+                anim = new ObjectAnimator().ofFloat(tv1, "rotation", 0f, 90f);
                 anim.setDuration(1500);//动画持续时间
                 anim.start();
                 break;
@@ -110,6 +119,9 @@ public class AttributeActivity extends AppCompatActivity implements View.OnClick
                 anset.play(anim1).with(anim2).before(anim3);//先播放anim3，再同时播放anim、anim2
                 anset.setDuration(3000);
                 anset.start();
+                break;
+            case R.id.but6:
+                myAnimView.startAnimation();
                 break;
         }
     }

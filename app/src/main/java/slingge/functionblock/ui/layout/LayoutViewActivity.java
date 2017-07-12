@@ -36,7 +36,6 @@ public class LayoutViewActivity extends SlinggeActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-
         switch (view.getId()) {
             case R.id.tv_card_layout:
                 startActivity(new Intent(this, CardViewLayout.class));
