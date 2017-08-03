@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 import slingge.functionblock.R;
 import slingge.functionblock.ui.animGraphical.GraphicalActivity;
+import slingge.functionblock.ui.eventDistribution.EventDistributionActivity;
 import slingge.functionblock.ui.layout.LayoutViewActivity;
 import slingge.functionblock.ui.recyclerView.RecyclerViewActivity;
 import slingge.functionblock.ui.sideslip.SideslipMainActivity;
@@ -55,8 +58,21 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
                 startActivity(new Intent(this, GraphicalActivity.class));
                 break;
             case R.id.tv_event:
-                startActivity(new Intent(this,  slingge.functionblock.ui.eventDistribution.EventDistributionActivity.class));
+                startActivity(new Intent(this, EventDistributionActivity.class));
                 break;
         }
     }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) { //RESULT_OK = -1
+            Bundle bundle = data.getExtras();
+            String scanResult = bundle.getString("result");
+            Toast.makeText(MainActivity.this, scanResult, Toast.LENGTH_LONG).show();
+        }
+    }
+
+
 }

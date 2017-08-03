@@ -11,7 +11,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-
+import android.view.animation.AccelerateInterpolator;
 
 
 /**
@@ -24,11 +24,8 @@ public class MyAnimView extends View {
     public Point currentPoint;
     private Paint mPaint;
 
-    private Context context;
-
     public MyAnimView(Context context) {
         super(context);
-        this.context = context;
     }
 
     public MyAnimView(Context context, @Nullable AttributeSet attrs) {
@@ -58,7 +55,7 @@ public class MyAnimView extends View {
 
 
     public void startAnimation() {
-        Point startPoint = new Point(Radius, Radius);
+        Point startPoint = new Point(Radius * 2, Radius * 2);
         Point endPoint = new Point(getWidth() - Radius, getHeight() - Radius);//动画结束位置，屏幕宽高-半径
         ValueAnimator anim = ValueAnimator.ofObject(new PointEvaluator(), startPoint, endPoint);
         anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -68,6 +65,9 @@ public class MyAnimView extends View {
                 invalidate();
             }
         });
+//        anim.setInterpolator(new AccelerateInterpolator(1.5f));
+//        anim.setDuration(3000);
+//        anim.start();
         ObjectAnimator anim2 = ObjectAnimator.ofObject(this, "color", new ColorEvaluator(), "#0000FF", "#FF0000");
         AnimatorSet animset = new AnimatorSet();
         animset.play(anim).with(anim2);
