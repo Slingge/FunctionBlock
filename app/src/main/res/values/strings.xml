@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FunctionBlock</string>
+
+    <string name="behavior_floating_action">slingge.functionblock.ui.sideslip.MovingBehavior</string>
 </resources>

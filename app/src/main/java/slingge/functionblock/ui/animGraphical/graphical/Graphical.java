@@ -129,7 +129,7 @@ public class Graphical extends View {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        //当View中所有的子控件均被映射成xml后触发
+        //当View中所有的子控件均被映射成xml后触发,从xml加载组件后回调
         Log.e(TAG, "onFinishInflate");//2
     }
 
