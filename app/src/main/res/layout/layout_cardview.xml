@@ -1,352 +1,362 @@
 <?xml version="1.0" encoding="utf-8"?>
-<slingge.functionblock.customView.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<slingge.functionblock.ui.moveFinish.SildingFinishLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:background="@color/AsukaColor"
+    android:layout_height="match_parent">
 
-    <!--卡片布局-->
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="3dp"
+    <slingge.functionblock.customView.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        android:padding="10dp">
 
-        <LinearLayout
+        <!--卡片布局-->
+
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="3dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="3dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="3dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="3dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="3dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="3dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="3dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="10dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="10dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="10dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="30dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="30dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="30dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="30dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp">
+        </android.support.v7.widget.CardView>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_margin="10dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            app:cardCornerRadius="4dp"
+            app:cardElevation="5dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Android"
-                android:textColor="#000"
-                android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
 
 
-</slingge.functionblock.customView.FlowLayout>
+    </slingge.functionblock.customView.FlowLayout>
+
+
+</slingge.functionblock.ui.moveFinish.SildingFinishLayout>
