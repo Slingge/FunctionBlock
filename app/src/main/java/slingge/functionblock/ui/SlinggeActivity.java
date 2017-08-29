@@ -1,14 +1,17 @@
 package slingge.functionblock.ui;
 
-import android.media.Image;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import slingge.functionblock.R;
+import slingge.functionblock.ui.moveFinish.SwipeBackLayout;
 import slingge.functionblock.view.StatusBarUtil;
 
 /**
@@ -24,6 +27,9 @@ public class SlinggeActivity extends AppCompatActivity {
         if (android.os.Build.VERSION.SDK_INT >= 21) {
             StatusBarUtil.setColor(this, this.getResources().getColor(R.color.AsukaColor));
         }
+        SwipeBackLayout layout = (SwipeBackLayout) LayoutInflater.from(this).inflate(
+                R.layout.base_sildingfinish, null);
+        layout.attachToActivity(this);
     }
 
 
@@ -40,4 +46,37 @@ public class SlinggeActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+        overridePendingTransition(R.anim.base_slide_right_in, R.anim.base_slide_remain);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, R.anim.base_slide_right_out);
+    }
+
+
+    /* public void initBaseActivity(boolean enableleftSild, boolean enableRightdsild) {
+        SildingFinishLayout sildingLayout = (SildingFinishLayout) findViewById(R.id.slidingfinish);
+        sildingLayout.setOnSildingFinishListener(this);
+        sildingLayout.setEnableLeftSildeEvent(enableleftSild);
+        sildingLayout.setEnableRightSildeEvent(enableRightdsild);
+    }
+
+
+    @Override
+    public void onSildingBack() {
+        this.finish();
+        this.finish();
+    }
+
+    @Override
+    public void onSildingForward() {
+        this.finish();
+        this.finish();
+    }*/
 }

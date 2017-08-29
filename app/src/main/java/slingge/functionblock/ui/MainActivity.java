@@ -65,6 +65,7 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
                 break;
             case R.id.tv_movefinish:
                 startActivity(new Intent(this, MoveFinishActivity.class));
+
                 break;
         }
     }

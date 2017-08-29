@@ -61,7 +61,7 @@ public class SildingFinishLayout extends RelativeLayout{
 
     private boolean enableLeftSildeEvent = true; //是否开启左侧切换事件
     private boolean enableRightSildeEvent = true; // 是否开启右侧切换事件
-    private final int size = 200; //按下时范围(处于这个范围内就启用切换事件，目的是使当用户从左右边界点击时才响应)
+    private final int size = 500; //按下时范围(处于这个范围内就启用切换事件，目的是使当用户从左右边界点击时才响应)
     private boolean isIntercept = false; //是否拦截触摸事件
     private boolean canSwitch;//是否可切换
     private boolean isSwitchFromLeft = false; //左侧切换
@@ -251,8 +251,8 @@ public class SildingFinishLayout extends RelativeLayout{
 
 
     public interface OnSildingFinishListener {
-        public void onSildingBack();
-        public void onSildingForward();
+         void onSildingBack();
+          void onSildingForward();
     }
 
 }
