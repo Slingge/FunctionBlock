@@ -11,6 +11,7 @@ import slingge.functionblock.R;
 import slingge.functionblock.ui.animGraphical.GraphicalActivity;
 import slingge.functionblock.ui.eventDistribution.EventDistributionActivity;
 import slingge.functionblock.ui.layout.LayoutViewActivity;
+import slingge.functionblock.ui.moveFinish.MoveFinishActivity;
 import slingge.functionblock.ui.recyclerView.RecyclerViewActivity;
 import slingge.functionblock.ui.sideslip.SideslipMainActivity;
 import slingge.functionblock.ui.specialEffects.ClickEffects;
@@ -37,6 +38,8 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
         tv_anim.setOnClickListener(this);
         TextView tv_event = (TextView) findViewById(R.id.tv_event);
         tv_event.setOnClickListener(this);
+        TextView tv_movefinish = (TextView) findViewById(R.id.tv_movefinish);
+        tv_movefinish.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +62,9 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
                 break;
             case R.id.tv_event:
                 startActivity(new Intent(this, EventDistributionActivity.class));
+                break;
+            case R.id.tv_movefinish:
+                startActivity(new Intent(this, MoveFinishActivity.class));
                 break;
         }
     }

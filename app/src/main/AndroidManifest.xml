@@ -92,7 +92,10 @@
             android:name=".ui.sideslip.SideslipMainActivity"
             android:screenOrientation="portrait" />
 
-
+        <!--侧滑-->
+        <activity
+            android:name=".ui.moveFinish.MoveFinishActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 
