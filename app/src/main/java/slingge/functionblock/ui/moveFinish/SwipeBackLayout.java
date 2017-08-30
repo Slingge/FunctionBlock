@@ -121,7 +121,7 @@ public class SwipeBackLayout extends FrameLayout {
                 break;
             case MotionEvent.ACTION_UP:
                 isSilding = false;
-                if (mContentView.getScrollX() <= -viewWidth / 2) {
+                if (mContentView.getScrollX() <= -viewWidth / 4) {
                     isFinish = true;
                     scrollRight();
                 } else {
