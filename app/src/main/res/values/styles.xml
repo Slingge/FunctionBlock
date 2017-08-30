@@ -6,9 +6,19 @@
         <item name="colorPrimary">@color/AsukaColor</item>
         <item name="colorPrimaryDark">@color/AsukaColor</item>
         <item name="colorAccent">@color/AsukaColor</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
     </style>
 
-
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/AsukaColor</item>
+        <item name="colorPrimaryDark">@color/AsukaColor</item>
+        <item name="colorAccent">@color/AsukaColor</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
