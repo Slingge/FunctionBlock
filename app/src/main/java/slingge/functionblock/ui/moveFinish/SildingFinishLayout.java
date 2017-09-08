@@ -1,6 +1,8 @@
 package slingge.functionblock.ui.moveFinish;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -79,6 +81,8 @@ public class SildingFinishLayout extends RelativeLayout{
         Log.e(TAG, "设备的最小滑动距离:" + mTouchSlop);
         mScroller = new Scroller(context);
     }
+
+
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {

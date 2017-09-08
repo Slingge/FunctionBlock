@@ -33,10 +33,7 @@
         <!--事件分发-->
         <activity
             android:name=".ui.eventDistribution.EventDistributionActivity"
-            android:screenOrientation="portrait"
-
-            />
-
+            android:screenOrientation="portrait" />
 
         <!--属性动画-->
         <activity
@@ -46,9 +43,7 @@
         <!--动画View-->
         <activity
             android:name=".ui.animGraphical.GraphicalActivity"
-            android:screenOrientation="portrait"
-
-            />
+            android:screenOrientation="portrait" />
 
         <!--约束布局-->
         <activity
