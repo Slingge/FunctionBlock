@@ -30,6 +30,20 @@
         </activity>
 
 
+        <!--查看多张-->
+        <activity
+            android:name=".ui.webView.PhotoBrowserActivity"
+            android:screenOrientation="portrait" />
+        <!--查看单张-->
+        <activity
+            android:name=".ui.webView.ShowWebImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <!--webview-->
+        <activity
+            android:name=".ui.webView.WebViewActivity"
+            android:screenOrientation="portrait" />
+
         <!--事件分发-->
         <activity
             android:name=".ui.eventDistribution.EventDistributionActivity"
@@ -91,10 +105,6 @@
             android:name=".ui.sideslip.SideslipMainActivity"
             android:screenOrientation="portrait" />
 
-        <!--侧滑-->
-        <activity
-            android:name=".ui.moveFinish.MoveFinishActivity"
-            android:screenOrientation="portrait" />
 
     </application>
 

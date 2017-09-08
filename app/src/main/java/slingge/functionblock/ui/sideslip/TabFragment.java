@@ -13,12 +13,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import slingge.functionblock.R;
 import slingge.functionblock.util.ToastUtil;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 /**
  * Created by Slingge on 2017/1/12 0012.

@@ -84,14 +84,14 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/tv_movefinish"
+        android:id="@+id/tv_webView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@color/AsukaColor"
         android:gravity="center"
         android:padding="10dp"
-        android:text="滑动返回"
+        android:text="WeView"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
