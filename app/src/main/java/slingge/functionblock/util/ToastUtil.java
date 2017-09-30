@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.Toast;
 
+import slingge.functionblock.application.SApplication;
+
 
 /**
  * Created by Administrator on 2016/9/27 0027.
@@ -47,6 +49,15 @@ public class ToastUtil {
      */
     public static void showToast(Context context, String text) {
         Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * 描述：Toast提示文本.
+     *
+     * @param text 文本
+     */
+    public static void showToast(String text) {
+        Toast.makeText(SApplication.getInstance(), text, Toast.LENGTH_SHORT).show();
     }
 
     /**

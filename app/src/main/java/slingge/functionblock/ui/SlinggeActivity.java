@@ -28,6 +28,10 @@ public class SlinggeActivity extends AppCompatActivity {
         }
         SwipeBackLayout layout = (SwipeBackLayout) LayoutInflater.from(this).inflate(
                 R.layout.base_sildingfinish, null);
+        layout.isRightSlide = true;
+        layout.isLeftSlide = true;
+        layout.isUpSlide = true;
+        layout.isDownSlide = true;
         layout.attachToActivity(this);
     }
 
@@ -59,23 +63,4 @@ public class SlinggeActivity extends AppCompatActivity {
     }
 
 
-    /* public void initBaseActivity(boolean enableleftSild, boolean enableRightdsild) {
-        SildingFinishLayout sildingLayout = (SildingFinishLayout) findViewById(R.id.slidingfinish);
-        sildingLayout.setOnSildingFinishListener(this);
-        sildingLayout.setEnableLeftSildeEvent(enableleftSild);
-        sildingLayout.setEnableRightSildeEvent(enableRightdsild);
-    }
-
-
-    @Override
-    public void onSildingBack() {
-        this.finish();
-        this.finish();
-    }
-
-    @Override
-    public void onSildingForward() {
-        this.finish();
-        this.finish();
-    }*/
 }

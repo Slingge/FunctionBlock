@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import slingge.functionblock.R;
+import slingge.functionblock.ui.SlinggeActivity;
 import slingge.functionblock.util.ToastUtil;
 
 
@@ -37,7 +38,7 @@ import slingge.functionblock.util.ToastUtil;
  * Created by Slingge on 2017/5/18 0018.
  */
 
-public class AttributeActivity extends AppCompatActivity implements View.OnClickListener {
+public class AttributeActivity extends SlinggeActivity implements View.OnClickListener {
 
     private TextView tv1;
 
