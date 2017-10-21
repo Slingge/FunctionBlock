@@ -41,7 +41,7 @@ public class FrameTextView extends android.support.v7.widget.AppCompatTextView {
         paint1.setStyle(Paint.Style.FILL);
 
         Paint paint2=new Paint();
-        paint2.setColor(getResources().getColor(R.color.black));
+        paint2.setColor(getResources().getColor(R.color.white));
         paint2.setStyle(Paint.Style.FILL);
 
         canvas.drawRect(0,0,getMeasuredWidth(),getMeasuredHeight(),paint1);

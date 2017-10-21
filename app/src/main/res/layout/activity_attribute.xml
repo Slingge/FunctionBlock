@@ -97,10 +97,16 @@
             <slingge.functionblock.ui.animGraphical.graphical.FrameTextView
                 android:layout_width="220dp"
                 android:layout_height="60dp"
-                android:text="带边框的TextViw"
+                android:background="@color/violet"
                 android:gravity="center"
-android:textColor="@color/white"
+                android:text="带边框的TextViw"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
+
+
+            <slingge.functionblock.ui.animGraphical.ImageClipView
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
 
 
         </LinearLayout>
