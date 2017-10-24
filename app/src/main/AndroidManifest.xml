@@ -105,6 +105,15 @@
             android:name=".ui.sideslip.SideslipMainActivity"
             android:screenOrientation="portrait" />
 
+        <!--图片操作-->
+        <activity
+            android:name=".ui.animGraphical.SetPolyToPolyActivity"
+            android:screenOrientation="portrait" />
+        <!--太极图-->
+        <activity
+            android:name=".ui.animGraphical.TaiJiViewActivity"
+            android:screenOrientation="portrait" />
+
 
     </application>
 

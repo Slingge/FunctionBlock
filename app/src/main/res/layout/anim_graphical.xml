@@ -26,6 +26,29 @@
                 android:text="属性动画"
                 android:textColor="@color/AsukaColor"
                 android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_matrix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="图片Matrix"
+                android:textColor="@color/AsukaColor"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv_taiji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="太极图片"
+                android:textColor="@color/AsukaColor"
+                android:textSize="15sp" />
+
+
         </LinearLayout>
 
 

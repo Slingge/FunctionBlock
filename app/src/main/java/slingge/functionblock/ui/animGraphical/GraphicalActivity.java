@@ -29,6 +29,10 @@ public class GraphicalActivity extends SlinggeActivity implements View.OnClickLi
         tv_title.setText("动画");
         TextView tv_attribute = (TextView) findViewById(R.id.tv_attribute);
         tv_attribute.setOnClickListener(this);
+        TextView tv_matrix = (TextView) findViewById(R.id.tv_matrix);
+        tv_matrix.setOnClickListener(this);
+        TextView tv_taiji = (TextView) findViewById(R.id.tv_taiji);
+        tv_taiji.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +40,14 @@ public class GraphicalActivity extends SlinggeActivity implements View.OnClickLi
         switch (view.getId()) {
             case R.id.tv_attribute:
                 Intent intent = new Intent(this, AttributeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_matrix:
+                intent = new Intent(this, SetPolyToPolyActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_taiji:
+                intent = new Intent(this, TaiJiViewActivity.class);
                 startActivity(intent);
                 break;
         }

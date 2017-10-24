@@ -44,4 +44,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.bm.photoview:library:1.4.1'
     //约束布局
+    compile 'com.github.GcsSloop:ViewSupport:v1.3.0'
 }
