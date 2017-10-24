@@ -26,9 +26,19 @@
                 android:text="属性动画"
                 android:textColor="@color/AsukaColor"
                 android:textSize="15sp" />
-
-
         </LinearLayout>
+
+
+        
+
+
+
+
+
+
+
+
+
     </ScrollView>
 
 </LinearLayout>
