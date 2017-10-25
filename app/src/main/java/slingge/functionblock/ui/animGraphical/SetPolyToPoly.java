@@ -47,7 +47,7 @@ public class SetPolyToPoly extends View {
 
     private void initBitmapAndMatrix() {
         mBitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.ic_evabg1);
+                R.drawable.ic_ab1);
 
         float[] temp = {0, 0,                                    // 左上
                 mBitmap.getWidth(), 0,                          // 右上
@@ -102,8 +102,6 @@ public class SetPolyToPoly extends View {
         canvas.translate(100,100);
 
         // 绘制坐标系
-        CanvasAidUtils.set2DAxisLength(900, 0, 1200, 0);
-        CanvasAidUtils.draw2DCoordinateSpace(canvas);
 //        CanvasAidUtils.setCoordinateLen(900, 0, 1200, 0);
 //        CanvasAidUtils.drawCoordinateSpace(canvas);
 

@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.widget.RadioGroup;
 
 import slingge.functionblock.R;
-import slingge.functionblock.ui.SlinggeActivity;
 
 /**
  * Created by Slingge on 2017/10/24 0024.
