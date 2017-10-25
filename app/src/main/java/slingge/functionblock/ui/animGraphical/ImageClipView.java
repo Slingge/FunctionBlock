@@ -59,7 +59,6 @@ public class ImageClipView extends View {
             canvas.drawBitmap(leftImage, leftMatrix, paint);
             canvas.restore();
             canvas.save();
-
         }
     }
 

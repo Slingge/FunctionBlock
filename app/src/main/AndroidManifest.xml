@@ -6,12 +6,11 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
     <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
-    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
-
+    <!-- 自动聚焦权限 -->
     <application
         android:name=".application.SApplication"
         android:allowBackup="true"
@@ -29,89 +28,94 @@
             </intent-filter>
         </activity>
 
-
-        <!--查看多张-->
+        <!-- 查看多张 -->
         <activity
             android:name=".ui.webView.PhotoBrowserActivity"
             android:screenOrientation="portrait" />
-        <!--查看单张-->
+        <!-- 查看单张 -->
         <activity
             android:name=".ui.webView.ShowWebImageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Transparent" />
-        <!--webview-->
+        <!-- webview -->
         <activity
             android:name=".ui.webView.WebViewActivity"
             android:screenOrientation="portrait" />
 
-        <!--事件分发-->
+        <!-- 事件分发 -->
         <activity
             android:name=".ui.eventDistribution.EventDistributionActivity"
             android:screenOrientation="portrait" />
 
-        <!--属性动画-->
+        <!-- 属性动画 -->
         <activity
             android:name=".ui.animGraphical.AttributeActivity"
             android:screenOrientation="portrait" />
 
-        <!--动画View-->
+        <!-- 动画View -->
         <activity
             android:name=".ui.animGraphical.GraphicalActivity"
             android:screenOrientation="portrait" />
 
-        <!--约束布局-->
+        <!-- 约束布局 -->
         <activity
             android:name=".ui.layout.ConstraintLayout"
             android:screenOrientation="portrait" />
-        <!--布局-->
+        <!-- 布局 -->
         <activity
             android:name=".ui.layout.LayoutViewActivity"
             android:screenOrientation="portrait" />
-        <!--卡片布局-->
+        <!-- 卡片布局 -->
         <activity
             android:name=".ui.layout.CardViewLayout"
             android:screenOrientation="portrait" />
-        <!--滑动隐藏显示标题、导航-->
+        <!-- 滑动隐藏显示标题、导航 -->
         <activity
             android:name=".ui.layout.SlidingHideBarLayout"
             android:screenOrientation="portrait" />
 
-        <!--RecyclerView-->
+        <!-- RecyclerView -->
         <activity
             android:name=".ui.recyclerView.RecyclerViewActivity"
             android:screenOrientation="portrait" />
 
-        <!-- 带HeaderView的分页加载LinearLayout RecyclerView-->
+        <!-- 带HeaderView的分页加载LinearLayout RecyclerView -->
         <activity
             android:name=".ui.recyclerView.EndlessLinearLayoutActivity"
             android:screenOrientation="portrait" />
 
-        <!--滑动隐藏toolbar-->
+        <!-- 滑动隐藏toolbar -->
         <activity
             android:name=".ui.recyclerView.CollapsingToolbarLayoutActivity"
             android:screenOrientation="portrait" />
 
-        <!--点击特效-->
+        <!-- 点击特效 -->
         <activity
             android:name=".ui.specialEffects.ClickEffects"
             android:screenOrientation="portrait" />
-        <!--水波纹效果-->
+        <!-- 水波纹效果 -->
         <activity
             android:name=".ui.specialEffects.ListViewActivity"
             android:screenOrientation="portrait" />
 
-        <!--侧滑-->
+        <!-- 侧滑 -->
         <activity
             android:name=".ui.sideslip.SideslipMainActivity"
             android:screenOrientation="portrait" />
 
-        <!--图片操作-->
+        <!-- 图片操作 -->
         <activity
             android:name=".ui.animGraphical.SetPolyToPolyActivity"
             android:screenOrientation="portrait" />
-        <!--太极图-->
+        <!-- 太极图 -->
         <activity
             android:name=".ui.animGraphical.TaiJiViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!--////////////////////////////////////////Android群英传源码\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+        <!-- 目录 -->
+        <activity
+            android:name=".ui.androidHeros.HerosCatalogActivity"
             android:screenOrientation="portrait" />
 
 

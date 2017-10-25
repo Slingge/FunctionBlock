@@ -15,7 +15,6 @@ import slingge.functionblock.ui.webView.WebViewActivity;
 import slingge.functionblock.ui.recyclerView.RecyclerViewActivity;
 import slingge.functionblock.ui.sideslip.SideslipMainActivity;
 import slingge.functionblock.ui.specialEffects.ClickEffects;
-import slingge.functionblock.util.ToastUtil;
 
 
 public class MainActivity extends SlinggeActivity implements View.OnClickListener {
@@ -41,7 +40,8 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
         TextView tv_event = (TextView) findViewById(R.id.tv_event);
         tv_event.setOnClickListener(this);
         TextView tv_webView = (TextView) findViewById(R.id.tv_webView);
-        tv_webView.setOnClickListener(this);
+        tv_webView.setOnClickListener(this); TextView tv_heros = (TextView) findViewById(R.id.tv_heros);
+        tv_heros.setOnClickListener(this);
     }
 
     @Override
@@ -67,6 +67,9 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
                 break;
             case R.id.tv_webView:
                 startActivity(new Intent(this, WebViewActivity.class));
+                break;
+            case R.id.tv_heros:
+//                startActivity(new Intent(this, HerosCatalogActivity.class));
                 break;
         }
     }
