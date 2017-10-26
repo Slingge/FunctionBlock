@@ -84,7 +84,7 @@ public class FrameTextView extends android.support.v7.widget.AppCompatTextView {
         mViewWidth = getMeasuredWidth();//view的原始的值
         if (mViewWidth > 0) {
             mPaint = getPaint();
-            mLinearGradient = new LinearGradient(0, 0, mViewWidth, 0, new int[]{Color.BLUE, Color.parseColor("#b50220"),Color.parseColor("#6950a1")}, null, Shader.TileMode.CLAMP);
+            mLinearGradient = new LinearGradient(0, 0, mViewWidth, 0, new int[]{Color.WHITE, Color.parseColor("#b50220"),Color.parseColor("#6950a1")}, null, Shader.TileMode.REPEAT);
             mPaint.setShader(mLinearGradient);
             mGradientMatrix = new Matrix();
         }
