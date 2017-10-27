@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 
 import slingge.functionblock.R;
+import slingge.functionblock.ui.androidHeros.HerosCatalogActivity;
 import slingge.functionblock.ui.animGraphical.GraphicalActivity;
 import slingge.functionblock.ui.eventDistribution.EventDistributionActivity;
 import slingge.functionblock.ui.layout.LayoutViewActivity;
@@ -69,7 +70,7 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
                 startActivity(new Intent(this, WebViewActivity.class));
                 break;
             case R.id.tv_heros:
-//                startActivity(new Intent(this, HerosCatalogActivity.class));
+                startActivity(new Intent(this, HerosCatalogActivity.class));
                 break;
         }
     }
