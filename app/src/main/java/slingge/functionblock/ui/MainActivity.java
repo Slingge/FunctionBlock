@@ -25,6 +25,7 @@ public class MainActivity extends SlinggeActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+        //
     }
 
     private void init() {
