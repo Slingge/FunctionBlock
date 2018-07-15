@@ -112,6 +112,11 @@
             android:name=".ui.animGraphical.TaiJiViewActivity"
             android:screenOrientation="portrait" />
 
+
+        <activity
+            android:name=".ui.ControlActivity"
+            android:screenOrientation="portrait" />
+
         <!--////////////////////////////////////////Android群英传源码\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
         <!-- 目录 -->
         <activity
