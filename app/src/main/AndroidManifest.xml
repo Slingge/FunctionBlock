@@ -117,6 +117,11 @@
             android:name=".ui.ControlActivity"
             android:screenOrientation="portrait" />
 
+
+        <activity
+            android:name=".ui.mvp.IpInfoActivity"
+            android:screenOrientation="portrait" />
+
         <!--////////////////////////////////////////Android群英传源码\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
         <!-- 目录 -->
         <activity

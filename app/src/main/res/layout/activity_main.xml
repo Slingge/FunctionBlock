@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -12,113 +12,134 @@
     android:background="@color/white"
     tools:context="slingge.functionblock.ui.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_layout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="布局View"
-        android:textColor="#fff"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="RecyclerView"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_effects"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="点击特效"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_slid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="侧滑"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_anim"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="动画"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_event"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="事件分发"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_webView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="WeView"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_control"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="控件"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_heros"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/AsukaColor"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Android群英传"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/tv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="布局View"
+            android:textColor="#fff"
+            android:textSize="16sp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="RecyclerView"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_effects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="点击特效"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_slid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="侧滑"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_anim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="动画"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="事件分发"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="WeView"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="控件"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_heros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Android群英传"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_mvp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="MVP"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

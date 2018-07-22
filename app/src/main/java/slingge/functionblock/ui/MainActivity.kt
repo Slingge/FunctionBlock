@@ -12,6 +12,7 @@ import slingge.functionblock.ui.androidHeros.HerosCatalogActivity
 import slingge.functionblock.ui.animGraphical.GraphicalActivity
 import slingge.functionblock.ui.eventDistribution.EventDistributionActivity
 import slingge.functionblock.ui.layout.LayoutViewActivity
+import slingge.functionblock.ui.mvp.IpInfoActivity
 import slingge.functionblock.ui.webView.WebViewActivity
 import slingge.functionblock.ui.recyclerView.RecyclerViewActivity
 import slingge.functionblock.ui.sideslip.SideslipMainActivity
@@ -36,6 +37,7 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
         tv_webView.setOnClickListener(this)
         tv_heros.setOnClickListener(this)
         tv_control.setOnClickListener(this)
+        tv_mvp.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -49,7 +51,7 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
             R.id.tv_webView -> startActivity(Intent(this, WebViewActivity::class.java))
             R.id.tv_control -> startActivity(Intent(this, ControlActivity::class.java))
             R.id.tv_heros -> startActivity(Intent(this, HerosCatalogActivity::class.java))
-
+            R.id.tv_mvp -> startActivity(Intent(this, IpInfoActivity::class.java))
         }
     }
 

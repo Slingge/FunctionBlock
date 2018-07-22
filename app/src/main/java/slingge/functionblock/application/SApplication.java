@@ -2,6 +2,8 @@ package slingge.functionblock.application;
 
 import android.app.Application;
 
+import slingge.functionblock.util.ImageLoaderUtil;
+
 /**
  * Created by Slingge on 2017/1/6 0006.
  */
@@ -29,6 +31,7 @@ public class SApplication extends Application {
     public void onCreate() {
         super.onCreate();
         myApplication = this;
+        ImageLoaderUtil.configImageLoader(this);
     }
 
 
