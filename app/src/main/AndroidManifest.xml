@@ -129,6 +129,13 @@
             android:screenOrientation="portrait" />
 
 
+        <!--MVVM-->
+        <activity
+            android:name=".ui.mvvm.MvvmActivity"
+            android:screenOrientation="portrait" />
+
+
+
     </application>
 
 </manifest>

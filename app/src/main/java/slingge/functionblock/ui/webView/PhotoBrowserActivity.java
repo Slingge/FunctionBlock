@@ -23,7 +23,6 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
 import slingge.functionblock.R;
-import slingge.functionblock.util.ToastUtil;
 
 
 public class PhotoBrowserActivity extends Activity implements View.OnClickListener {
