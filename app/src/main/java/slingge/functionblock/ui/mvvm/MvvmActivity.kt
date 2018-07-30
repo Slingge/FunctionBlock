@@ -5,6 +5,7 @@ import android.os.Bundle
 import slingge.functionblock.R
 import slingge.functionblock.databinding.ActivityMvvmBinding
 import slingge.functionblock.ui.SlinggeActivity
+import slingge.functionblock.util.ToastUtil
 
 /**
  * Created by Slingge on 2018/7/24.
@@ -12,6 +13,9 @@ import slingge.functionblock.ui.SlinggeActivity
 class MvvmActivity : SlinggeActivity() {
 
     private var binding: ActivityMvvmBinding? = null
+
+    private val model = Model()
+    private var age = 16
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +25,15 @@ class MvvmActivity : SlinggeActivity() {
 
     private fun init() {
         setTitle("MVVP模式")
-        val model = Model()
         model.name = "温莉洛克贝尔"
-        model.age = "16"
+        model.age = age
         binding!!.model = model
+
+        binding!!.btn.setOnClickListener { v ->
+            age++
+            model.notify(age)
+        }
+
     }
 
 

@@ -8,6 +8,8 @@
         <variable
             name="Model"
             type="slingge.functionblock.ui.mvvm.Model" />
+
+
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -42,11 +44,33 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
-            android:text="@{Model.name}"
+            android:text="@{@string/age+String.valueOf(Model.age)}"
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@+id/tv_name"
             app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_margin="10dp"
+
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/asukacolor_bg"
+            android:text="年龄"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
 
 
     </android.support.constraint.ConstraintLayout>

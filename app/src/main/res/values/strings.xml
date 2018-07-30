@@ -2,4 +2,7 @@
     <string name="app_name">FunctionBlock</string>
 
     <string name="behavior_floating_action">slingge.functionblock.ui.sideslip.MovingBehavior</string>
+
+    <string name="age">年龄：</string>
+
 </resources>
