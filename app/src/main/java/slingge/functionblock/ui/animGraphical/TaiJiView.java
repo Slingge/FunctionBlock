@@ -52,17 +52,17 @@ public class TaiJiView extends View {
         canvas.rotate(degrees);                 //旋转画布
 
         //绘制两个半圆
-        int radius = Math.min(width, height) / 2 - 100;        		//太极半径
+        int radius = Math.min(width, height) / 2 -100;        		//取宽高最小的值，太极半径
         RectF rect = new RectF(-radius, -radius, radius, radius);   //绘制区域
-        canvas.drawArc(rect, 90, 180, true, blackPaing);            //绘制黑色半圆
-        canvas.drawArc(rect, -90, 180, true, whitePaint);           //绘制白色半圆
+        canvas.drawArc(rect, 90, 180, true, blackPaing);            //绘制黑色半圆左边
+        canvas.drawArc(rect, -90, 180, true, whitePaint);           //绘制白色半圆右边
 
         //绘制两个小圆
         int smallRadius = radius / 2;	                            //小圆半径为大圆的一半
         canvas.drawCircle(0, -smallRadius, smallRadius, blackPaing);
         canvas.drawCircle(0, smallRadius, smallRadius, whitePaint);
 
-        //绘制鱼眼（两个更小的圆）
+         //绘制鱼眼（两个更小的圆）++++
         canvas.drawCircle(0, -smallRadius, smallRadius / 4, whitePaint);
         canvas.drawCircle(0, smallRadius, smallRadius / 4, blackPaing);
 
