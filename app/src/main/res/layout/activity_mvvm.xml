@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
             android:src="@mipmap/ic_launcher"
             app:layout_constraintTop_toBottomOf="@+id/tv_age" />
 

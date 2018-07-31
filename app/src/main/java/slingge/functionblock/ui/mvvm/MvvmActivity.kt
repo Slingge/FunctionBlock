@@ -2,6 +2,7 @@ package slingge.functionblock.ui.mvvm
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import com.nostra13.universalimageloader.core.ImageLoader
 import slingge.functionblock.R
 import slingge.functionblock.databinding.ActivityMvvmBinding
 import slingge.functionblock.ui.SlinggeActivity
@@ -35,6 +36,7 @@ class MvvmActivity : SlinggeActivity() {
             model.notify(age)
         }
 
+        ImageLoader.getInstance().displayImage(model.imageUrl,binding!!.image)
     }
 
 
