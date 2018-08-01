@@ -108,7 +108,7 @@ public class AttributeActivity extends SlinggeActivity implements View.OnClickLi
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
-                        ToastUtil.showToast(AttributeActivity.this, "动画结束");
+                        ToastUtil.INSTANCE.showToast(AttributeActivity.this, "动画结束");
                     }
                 });
                 break;

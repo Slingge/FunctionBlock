@@ -49,7 +49,7 @@ public class TabFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         content = getArguments().getString("content");
-        ToastUtil.showToast(getActivity(), content);
+        ToastUtil.INSTANCE.showToast(getActivity(), content);
         Log.e("content...............", content);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

@@ -4,6 +4,7 @@ import android.content.Context
 import android.databinding.BaseObservable
 import android.databinding.Bindable
 import android.view.View
+import kotlinx.android.synthetic.main.activity_mvvm.*
 import slingge.functionblock.BR
 import slingge.functionblock.R
 import slingge.functionblock.util.ToastUtil

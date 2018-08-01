@@ -96,7 +96,7 @@ public class EventDistributionActivity extends SlinggeActivity implements View.O
                 finish();
                 break;
             case R.id.but1:
-                ToastUtil.showToast(this, "butOnclick打印顺序9");
+                ToastUtil.INSTANCE.showToast(this, "butOnclick打印顺序9");
                 Log.e(TAG, "onClickButton");//打印顺序9
                 break;
         }

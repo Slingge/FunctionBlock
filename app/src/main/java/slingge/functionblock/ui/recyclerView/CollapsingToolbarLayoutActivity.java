@@ -133,7 +133,7 @@ public class CollapsingToolbarLayoutActivity extends SlinggeActivity {
             @Override
             public void onItemClick(RecyclerView.ViewHolder vh) {
                 int position = vh.getAdapterPosition() - 1;
-                ToastUtil.showToast(CollapsingToolbarLayoutActivity.this, dataList.get(position).title);
+                ToastUtil.INSTANCE.showToast(CollapsingToolbarLayoutActivity.this, dataList.get(position).title);
             }
         });
 

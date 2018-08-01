@@ -70,6 +70,6 @@ public class TabFragment6 extends LazyFragment {
     @Override
     public void loadData() {
         initData();
-        ToastUtil.showToast(getActivity(), content);
+        ToastUtil.INSTANCE.showToast(getActivity(), content);
     }
 }

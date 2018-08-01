@@ -45,7 +45,7 @@
             android:onClick="@{Model.onClickListener}"
             android:padding="10dp"
             android:text="@{@string/age+String.valueOf(Model.age)}"
-            android:textColor="@color/AsukaColor"
+            android:textColor="@color/chinese_red"
             android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@+id/tv_name"
             app:layout_constraintTop_toBottomOf="@+id/include" />

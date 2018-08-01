@@ -198,7 +198,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
                     activity.notifyDataSetChanged();
                     break;
                 case -3:
-                    ToastUtil.showToast(EndlessLinearLayoutActivity.this, "网络错误");
+                    ToastUtil.INSTANCE.showToast(EndlessLinearLayoutActivity.this, "网络错误");
                     if (activity.isRefresh) {
                         activity.isRefresh = false;
                         activity.mRecyclerView.refreshComplete();

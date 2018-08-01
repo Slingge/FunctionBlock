@@ -84,7 +84,7 @@ public class RecyclerViewActivity extends SlinggeActivity implements View.OnClic
             @Override
             public void onItemClick(RecyclerView.ViewHolder vh) {
                 int position = vh.getAdapterPosition();
-                ToastUtil.showToast(RecyclerViewActivity.this, "First Lieutenant Riza Hawkeye  " + position);
+                ToastUtil.INSTANCE.showToast(RecyclerViewActivity.this, "First Lieutenant Riza Hawkeye  " + position);
             }
         });
     }
