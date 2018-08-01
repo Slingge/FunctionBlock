@@ -59,11 +59,8 @@ object ToastUtil {
     fun showToast(text: String) {
         if (mToast != null) {
             mToast!!.cancel()
-        }else{
-            mToast = Toast.makeText(SApplication.getInstance(), "", Toast.LENGTH_SHORT)
         }
-
-        mToast!!.setText(text)
+            mToast = Toast.makeText(SApplication.getInstance(), text, Toast.LENGTH_SHORT)
         mToast!!.duration = Toast.LENGTH_SHORT
         mToast!!.show()
     }

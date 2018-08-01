@@ -20,27 +20,32 @@ class Model : BaseObservable() {
     var age = 0
     @Bindable
     var imageUrl = ""
+    @Bindable
+    var ages = ""
 
-    fun notify(age: Int) {
+    fun notify(age: Int,ages:String) {
         this.age = age
+        this.ages=ages
         notifyPropertyChanged(BR.age)
+        notifyPropertyChanged(BR.ages)
     }
 
 
     fun onClickListener(view: View) {
-        when(view.id){
-            R.id.tv_age->{
+        when (view.id) {
+            R.id.tv_age -> {
                 ToastUtil.showToast("年龄")
             }
-            R.id.tv_name->{
+            R.id.tv_name -> {
                 ToastUtil.showToast("名字")
             }
-            R.id.image->{
+            R.id.image -> {
                 ToastUtil.showToast("图像")
             }
-            R.id.btn->{
+            R.id.btn -> {
                 age++
-                notify(age)
+                notify(age,ages)
+                ToastUtil.showToast("自定义年龄$ages")
             }
         }
     }
