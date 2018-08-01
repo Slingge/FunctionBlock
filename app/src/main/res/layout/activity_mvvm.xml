@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
 
     <data>
 
@@ -23,13 +24,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
+        <!--字符串直接拼接用的是“esc”键下面的单引号-->
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{Model.onClickListener}"
             android:padding="10dp"
-            android:text="@{Model.name}"
+            android:text="@{`名字：`+Model.name}"
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,9 +42,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:onClick="@{Model.onClickListener}"
             android:padding="10dp"
             android:text="@{@string/age+String.valueOf(Model.age)}"
-            android:textColor="@color/black"
+            android:textColor="@color/AsukaColor"
             android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@+id/tv_name"
             app:layout_constraintTop_toBottomOf="@+id/include" />
@@ -52,10 +55,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:scaleType="centerCrop"
             android:adjustViewBounds="true"
+            android:onClick="@{Model.onClickListener}"
+            android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher"
-            app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_age"
+            bind:imageUrl="@{Model.imageUrl}" />
 
         <Button
             android:id="@+id/btn"
@@ -64,10 +69,19 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/asukacolor_bg"
+            android:onClick="@{Model.onClickListener}"
             android:text="年龄"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn"/>
 
 
     </android.support.constraint.ConstraintLayout>

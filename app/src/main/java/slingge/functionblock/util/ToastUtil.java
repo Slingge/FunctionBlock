@@ -1,5 +1,6 @@
 package slingge.functionblock.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,8 @@ import slingge.functionblock.application.SApplication;
  * Created by Administrator on 2016/9/27 0027.
  */
 public class ToastUtil {
+
+    private static Toast mToast;
 
     /**
      * 上下文.
@@ -28,6 +31,7 @@ public class ToastUtil {
      * 主要Handler类，在线程中可用
      * what：0.提示文本信息
      */
+    @SuppressLint("HandlerLeak")
     private static Handler baseHandler = new Handler() {
 
         @Override
@@ -57,7 +61,13 @@ public class ToastUtil {
      * @param text 文本
      */
     public static void showToast(String text) {
-        Toast.makeText(SApplication.getInstance(), text, Toast.LENGTH_SHORT).show();
+        if (mToast != null) {
+            mToast.cancel();
+        }
+        mToast = Toast.makeText(SApplication.getInstance(), "", Toast.LENGTH_SHORT);
+        mToast.setText(text);
+        mToast.setDuration(Toast.LENGTH_SHORT);
+        mToast.show();
     }
 
     /**

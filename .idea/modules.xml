@@ -3,12 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FunctionBlock.iml" filepath="$PROJECT_DIR$/FunctionBlock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FunctionBlock.iml" filepath="$PROJECT_DIR$/FunctionBlock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SRecyclerview_library/SRecyclerview_library.iml" filepath="$PROJECT_DIR$/SRecyclerview_library/SRecyclerview_library.iml" />
       <module fileurl="file://$PROJECT_DIR$/SRecyclerview_library/SRecyclerview_library.iml" filepath="$PROJECT_DIR$/SRecyclerview_library/SRecyclerview_library.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/okhttputils/okhttputils.iml" filepath="$PROJECT_DIR$/okhttputils/okhttputils.iml" />
       <module fileurl="file://$PROJECT_DIR$/okhttputils/okhttputils.iml" filepath="$PROJECT_DIR$/okhttputils/okhttputils.iml" />
     </modules>
   </component>
