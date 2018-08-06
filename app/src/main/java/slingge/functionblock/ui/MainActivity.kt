@@ -12,6 +12,7 @@ import slingge.functionblock.ui.androidHeros.HerosCatalogActivity
 import slingge.functionblock.ui.animGraphical.GraphicalActivity
 import slingge.functionblock.ui.eventDistribution.EventDistributionActivity
 import slingge.functionblock.ui.layout.LayoutViewActivity
+import slingge.functionblock.ui.lockScreenActivity.Service
 import slingge.functionblock.ui.mvp.IpInfoActivity
 import slingge.functionblock.ui.mvvm.MvvmActivity
 import slingge.functionblock.ui.webView.WebViewActivity
@@ -26,6 +27,7 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         init()
+        startService(Intent(this, Service::class.java))
     }
 
     private fun init() {
