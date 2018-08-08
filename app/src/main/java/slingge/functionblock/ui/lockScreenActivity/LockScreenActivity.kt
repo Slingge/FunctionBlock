@@ -7,12 +7,12 @@ import android.view.KeyEvent
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_lockscreen.*
 import slingge.functionblock.R
-import slingge.functionblock.ui.SlinggeActivity
 
 /**
+ * 需要打开锁定显示权限
  * Created by Slingge on 2018/8/6
  */
- class LockScreenActivity:SlinggeActivity(){
+class LockScreenActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

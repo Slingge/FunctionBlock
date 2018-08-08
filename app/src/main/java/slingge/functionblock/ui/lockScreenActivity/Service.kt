@@ -19,7 +19,6 @@ class Service : Service() {
         super.onCreate()
         val mScreenOnFilter = IntentFilter()
         mScreenOnFilter.addAction(Intent.ACTION_SCREEN_OFF)
-        mScreenOnFilter.addAction(Intent.ACTION_SCREEN_ON)
         registerReceiver(mScreenActionReceiver, mScreenOnFilter)
     }
 
