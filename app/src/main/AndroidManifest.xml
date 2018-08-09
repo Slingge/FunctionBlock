@@ -10,6 +10,11 @@
     <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <!--锁屏Activity-->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
     <!-- 自动聚焦权限 -->
     <application
         android:name=".application.SApplication"
@@ -134,6 +139,15 @@
             android:name=".ui.mvvm.MvvmActivity"
             android:screenOrientation="portrait" />
 
+        <!--锁屏界面-->
+        <activity
+            android:name=".ui.lockScreenActivity.LockScreenActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="slingge.functionblock.ui.lockScreenActivity.LockIntent"
+            android:theme="@style/myTransparent" />
+
+        <service android:name=".ui.lockScreenActivity.Service" />
 
 
     </application>
