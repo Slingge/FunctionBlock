@@ -12,6 +12,8 @@ public class SApplication extends Application {
     //
 
 
+
+
     private static SApplication myApplication;
 
     public static SApplication getInstance() {
