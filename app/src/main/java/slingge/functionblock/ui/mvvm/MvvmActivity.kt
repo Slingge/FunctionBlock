@@ -2,6 +2,7 @@ package slingge.functionblock.ui.mvvm
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import com.nostra13.universalimageloader.core.ImageLoader
 import kotlinx.android.synthetic.main.activity_mvvm.*
 import slingge.functionblock.R
@@ -33,6 +34,17 @@ class MvvmActivity : SlinggeActivity() {
                 ".cn%2Fmg%2F2011%2F12%2F11%2F202159.69791755.jpg"
         binding!!.model = model
 
+
+        val linearLayoutManager = LinearLayoutManager(this)
+        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+        binding!!.recyclerView.layoutManager = linearLayoutManager
+
+        var list = ArrayList<ItemModel>()
+        list.add(ItemModel("爱德华-埃里克"))
+        list.add(ItemModel("温丽-洛克贝尔"))
+
+        val adapter = Adapter(this, list)
+        binding!!.recyclerView.adapter=adapter
     }
 
 

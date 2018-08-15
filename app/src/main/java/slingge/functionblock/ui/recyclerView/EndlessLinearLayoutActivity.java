@@ -77,8 +77,8 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
         for (int i = 0; i < 11; i++) {
             ItemModel item = new ItemModel();
             item.id = i;
-            item.title = "item" + i;
-//            dataList.add(item);
+            item.title = "item_mvvm" + i;
+//            dataList.add(item_mvvm);
         }
         mCurrentCounter = dataList.size();
         mDataAdapter = new DataAdapter(this);
@@ -183,7 +183,7 @@ public class EndlessLinearLayoutActivity extends SlinggeActivity {
                         }
                         ItemModel item = new ItemModel();
                         item.id = currentSize + i;
-                        item.title = "item" + (item.id);
+                        item.title = "item_mvvm" + (item.id);
                         newList.add(item);
                     }
                     activity.addItems(newList);
