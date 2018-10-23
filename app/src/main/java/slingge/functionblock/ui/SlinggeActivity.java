@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import slingge.functionblock.R;
 import slingge.functionblock.ui.moveFinish.SwipeBackLayout;
-import slingge.functionblock.ui.util.ProgressDialogUtil;
 import slingge.functionblock.view.StatusBarUtil;
 
 /**

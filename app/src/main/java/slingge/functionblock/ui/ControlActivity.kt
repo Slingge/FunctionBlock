@@ -32,20 +32,19 @@ class ControlActivity : SlinggeActivity(), View.OnClickListener {
                 showSnackbar()
             }
             R.id.btn_enter -> {
-                textlayout.error="用户名错误"
-                textlayout.isErrorEnabled=true
-                textlayout2.error="密码正确"
-                textlayout2.isErrorEnabled=false
+                textlayout.error = "用户名错误"
+                textlayout.isErrorEnabled = true
+                textlayout2.error = "密码正确"
+                textlayout2.isErrorEnabled = false
             }
         }
     }
 
 
     private fun showSnackbar() {
-        Snackbar.make(cl_main, "标题", Snackbar.LENGTH_LONG).setAction("点击事件",
-                { v ->
-                    ToastUtil.showToast("toast")
-                }).setDuration(Snackbar.LENGTH_LONG).show()
+        Snackbar.make(cl_main, "标题", Snackbar.LENGTH_LONG).setAction("点击事件") { v ->
+            ToastUtil.showToast("toast")
+        }.setDuration(Snackbar.LENGTH_LONG).show()
     }
 
 

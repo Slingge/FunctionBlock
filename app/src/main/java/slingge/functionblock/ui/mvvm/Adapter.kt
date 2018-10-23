@@ -12,8 +12,7 @@ import slingge.functionblock.databinding.ItemMvvmBinding
  * Created by Slingge on 2018/8.11.
  */
 class Adapter(val context: Context, var list: ArrayList<ItemModel>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
-
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = DataBindingUtil.inflate<ItemMvvmBinding>(LayoutInflater.from(context), R.layout.item_mvvm, parent, false)
         return ViewHolder(binding)
     }
@@ -22,11 +21,10 @@ class Adapter(val context: Context, var list: ArrayList<ItemModel>) : RecyclerVi
         return list.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val model = list[position]
-        holder!!.getBinding().itemModel = model
+        holder.getBinding().itemModel = model
     }
-
 
     class ViewHolder(val itemMvvmBinding: ItemMvvmBinding) : RecyclerView.ViewHolder(itemMvvmBinding.root) {
         fun getBinding(): ItemMvvmBinding {

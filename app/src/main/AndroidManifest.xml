@@ -147,6 +147,12 @@
             android:taskAffinity="slingge.functionblock.ui.lockScreenActivity.LockIntent"
             android:theme="@style/myTransparent" />
 
+        <!--Glidel-->
+        <activity
+            android:name=".ui.glideImage.GlidelImageActivity"
+            android:screenOrientation="portrait" />
+
+
         <service android:name=".ui.lockScreenActivity.Service" />
 
 
