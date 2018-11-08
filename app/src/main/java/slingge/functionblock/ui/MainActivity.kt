@@ -42,6 +42,7 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
         tv_control.setOnClickListener(this)
         tv_mvp.setOnClickListener(this)
         tv_mvvm.setOnClickListener(this)
+        tv_RxJava.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -57,6 +58,7 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
             R.id.tv_heros -> startActivity(Intent(this, HerosCatalogActivity::class.java))
             R.id.tv_mvp -> startActivity(Intent(this, IpInfoActivity::class.java))
             R.id.tv_mvvm -> startActivity(Intent(this, MvvmActivity::class.java))
+            R.id.tv_RxJava -> startActivity(Intent(this, MvvmActivity::class.java))
         }
     }
 

@@ -149,6 +149,18 @@
             android:textColor="@color/white"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tv_RxJava"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/AsukaColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="rxJava\Retrofit"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
 

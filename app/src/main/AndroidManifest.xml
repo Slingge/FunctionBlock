@@ -139,6 +139,10 @@
             android:name=".ui.mvvm.MvvmActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ui.rxJava.view.RetrofitActivity"
+            android:screenOrientation="portrait" />
+
         <!--锁屏界面-->
         <activity
             android:name=".ui.lockScreenActivity.LockScreenActivity"
