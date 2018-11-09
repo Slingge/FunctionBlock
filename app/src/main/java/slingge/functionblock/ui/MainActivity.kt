@@ -17,6 +17,7 @@ import slingge.functionblock.ui.mvp.IpInfoActivity
 import slingge.functionblock.ui.mvvm.MvvmActivity
 import slingge.functionblock.ui.webView.WebViewActivity
 import slingge.functionblock.ui.recyclerView.RecyclerViewActivity
+import slingge.functionblock.ui.rxJava.view.RetrofitActivity
 import slingge.functionblock.ui.sideslip.SideslipMainActivity
 import slingge.functionblock.ui.specialEffects.ClickEffects
 
@@ -58,7 +59,7 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
             R.id.tv_heros -> startActivity(Intent(this, HerosCatalogActivity::class.java))
             R.id.tv_mvp -> startActivity(Intent(this, IpInfoActivity::class.java))
             R.id.tv_mvvm -> startActivity(Intent(this, MvvmActivity::class.java))
-            R.id.tv_RxJava -> startActivity(Intent(this, MvvmActivity::class.java))
+            R.id.tv_RxJava -> startActivity(Intent(this, RetrofitActivity::class.java))
         }
     }
 

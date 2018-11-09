@@ -17,15 +17,15 @@ class PaoViewModel(val remote: PaoService) {
 
     fun loadArticle() {
         //先使用默认id
-        remote.getArticleDetail((8787))
+        remote.getArticleDetail((8773))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ t: Article? ->
-                    articleDetails.set(t?.toString())
-                }, { t: Throwable? ->
-                    articleDetails.set(t?.message ?: "error")
-                })
+                .subscribe { t: Article? ->
+                    t?.let {
+                        articleDetails.set(it.content)
+                    }
+                }
     }
 
 
-}
+    }

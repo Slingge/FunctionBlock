@@ -1,4 +1,4 @@
-package slingge.functionblock.ui.util
+package slingge.functionblock.ui.glideImage
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.load.DecodeFormat

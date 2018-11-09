@@ -17,9 +17,9 @@ import android.widget.Toast;
 
 import com.bm.library.PhotoView;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
+//import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
+//import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+//import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
 import slingge.functionblock.R;
@@ -71,7 +71,7 @@ public class PhotoBrowserActivity extends Activity implements View.OnClickListen
 
             @Override
             public Object instantiateItem(ViewGroup container, final int position) {
-                if (imageUrls[position] != null && !"".equals(imageUrls[position])) {
+              /*  if (imageUrls[position] != null && !"".equals(imageUrls[position])) {
                     final PhotoView view = new PhotoView(PhotoBrowserActivity.this);
                     view.enable();
                     view.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -97,7 +97,7 @@ public class PhotoBrowserActivity extends Activity implements View.OnClickListen
 
                     container.addView(view);
                     return view;
-                }
+                }*/
                 return null;
             }
 
@@ -223,7 +223,7 @@ public class PhotoBrowserActivity extends Activity implements View.OnClickListen
             return;
         }
         PhotoView photoViewTemp = (PhotoView) containerTemp.getChildAt(0);
-        if (photoViewTemp != null) {
+        /*if (photoViewTemp != null) {
             GlideBitmapDrawable glideBitmapDrawable = (GlideBitmapDrawable) photoViewTemp.getDrawable();
             if (glideBitmapDrawable == null) {
                 return;
@@ -253,7 +253,7 @@ public class PhotoBrowserActivity extends Activity implements View.OnClickListen
                     });
                 }
             });
-        }
+        }*/
     }
 
     @Override

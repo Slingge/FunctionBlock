@@ -6,6 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import slingge.functionblock.R
+import slingge.functionblock.databinding.ActivityRetrofitBinding
 import slingge.functionblock.ui.SlinggeActivity
 import slingge.functionblock.ui.rxJava.model.remote.PaoService
 import slingge.functionblock.ui.rxJava.viewModel.PaoViewModel
@@ -16,7 +17,7 @@ import slingge.functionblock.ui.rxJava.viewModel.PaoViewModel
 class RetrofitActivity : SlinggeActivity() {
 
     private lateinit var mViewModel: PaoViewModel
-    private lateinit var mBinding: RetrofitActivity
+    private lateinit var mBinding: ActivityRetrofitBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,7 @@ class RetrofitActivity : SlinggeActivity() {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build().create(PaoService::class.java)
         mViewModel = PaoViewModel(remote)
-        mBinding = mViewModel
+        mBinding.vm = mViewModel
     }
 
 
