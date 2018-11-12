@@ -74,6 +74,14 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //room (local)
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+    kapt 'android.arch.persistence.room:compiler:1.1.1'
+    //不重要
+    implementation 'us.feras.mdv:markdownview:1.1.0'
+    implementation 'org.jsoup:jsoup:1.10.3'
 }
 repositories {
     mavenCentral()

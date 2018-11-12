@@ -36,16 +36,16 @@ class IpInfoActivity : SlinggeActivity(), IpinfoContract.View {
     private fun int() {
         ipinfoContract = IpinfoPresenter(IpinfoTask, this)
         btn.setOnClickListener { v ->
-//                        ipinfoContract!!.getIPInfo("")
+            //                        ipinfoContract!!.getIPInfo("")
             mViewModel.getUrl()
         }
         val remote = Retrofit.Builder()
-                .baseUrl("http://guolin.tech/api/")
-//                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-//                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl("http://gank.io/api/data/")
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
                 .build().create(MvpService::class.java)
 
-        mViewModel = UrlViewModel(remote)
+        mViewModel = UrlViewModel(remote, binding)
         binding.vm = mViewModel
     }
 

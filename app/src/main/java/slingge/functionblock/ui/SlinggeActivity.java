@@ -30,8 +30,8 @@ public class SlinggeActivity extends AppCompatActivity {
                 R.layout.base_sildingfinish, null);
         layout.isRightSlide = true;
         layout.isLeftSlide = true;
-        layout.isUpSlide = true;
-        layout.isDownSlide = true;
+        layout.isUpSlide = false;
+        layout.isDownSlide = false;
         layout.attachToActivity(this);
     }
 

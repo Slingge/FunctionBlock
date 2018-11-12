@@ -1,8 +1,8 @@
 package slingge.functionblock.ui.mvp
 
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.GET
+import slingge.functionblock.ui.mvp.viewModel.UrlModel
 
 
 /**
@@ -11,8 +11,8 @@ import retrofit2.http.GET
 interface MvpService {
 
 
-    @GET("bing_pic")
-    fun getUrl(): okhttp3.Callback
+    @GET("福利/10/1")
+    fun getUrl(): Call<UrlModel>
 
 
 }
