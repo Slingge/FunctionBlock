@@ -1,6 +1,7 @@
 package slingge.functionblock.ui.mvvm
 
 import android.databinding.BindingAdapter
+import android.text.TextUtils
 import android.widget.ImageView
 
 import com.nostra13.universalimageloader.core.ImageLoader
@@ -15,7 +16,9 @@ object LoadImage {
     @BindingAdapter("bind:imageUrl")
     @JvmStatic
     fun loadImage(imageView: ImageView, url: String) {
-        ImageLoader.getInstance().displayImage(url, imageView)
+        if(!TextUtils.isEmpty(url)){
+            ImageLoader.getInstance().displayImage(url, imageView)
+        }
     }
 
 }

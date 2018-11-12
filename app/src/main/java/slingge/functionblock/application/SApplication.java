@@ -2,6 +2,10 @@ package slingge.functionblock.application;
 
 import android.app.Application;
 
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.Cache;
+import okhttp3.OkHttpClient;
 import slingge.functionblock.util.ImageLoaderUtil;
 
 /**
@@ -36,7 +40,18 @@ public class SApplication extends Application {
         ImageLoaderUtil.configImageLoader(this);
     }
 
-
+    private OkHttpClient getClient() {
+        Cache cache = new Cache(SApplication.getInstance().getCacheDir(), 1024 * 1024);
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .cache(cache)
+                .connectTimeout(5000, TimeUnit.SECONDS)
+                .readTimeout(5000, TimeUnit.SECONDS)
+                //                .addInterceptor(new RequestLogInterceoptor())
+                //                .addInterceptor(new ResponseLogInterceptor())
+                //                .addInterceptor(new RequestLogInterceoptor())
+                .build();
+        return okHttpClient;
+    }
 
 
 }

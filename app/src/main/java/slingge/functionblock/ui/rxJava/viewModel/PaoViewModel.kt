@@ -27,5 +27,4 @@ class PaoViewModel(val remote: PaoService) {
                 }
     }
 
-
-    }
+}

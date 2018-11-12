@@ -1,58 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
 
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/top_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
+        <variable
+            name="vm"
+            type="slingge.functionblock.ui.mvp.viewModel.UrlViewModel" />
 
-    <TextView
-        android:id="@+id/tv_country"
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
-
-    <TextView
-        android:id="@+id/tv_arer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_country" />
-
-    <TextView
-        android:id="@+id/tv_city"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_arer" />
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="获取"
-        android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:adjustViewBounds="true"
-        app:layout_constraintTop_toBottomOf="@+id/btn" />
+        <include
+            android:id="@+id/include"
+            layout="@layout/top_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <TextView
+            android:id="@+id/tv_arer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_country" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_arer" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            bind:imageUrl="@{vm.url}"
+            app:layout_constraintTop_toBottomOf="@+id/btn" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

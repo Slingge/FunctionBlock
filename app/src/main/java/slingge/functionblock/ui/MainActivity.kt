@@ -20,6 +20,7 @@ import slingge.functionblock.ui.recyclerView.RecyclerViewActivity
 import slingge.functionblock.ui.rxJava.view.RetrofitActivity
 import slingge.functionblock.ui.sideslip.SideslipMainActivity
 import slingge.functionblock.ui.specialEffects.ClickEffects
+import slingge.functionblock.util.ToastUtil
 
 
 class MainActivity : SlinggeActivity(), View.OnClickListener {
@@ -44,6 +45,8 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
         tv_mvp.setOnClickListener(this)
         tv_mvvm.setOnClickListener(this)
         tv_RxJava.setOnClickListener(this)
+
+
     }
 
     override fun onClick(view: View) {

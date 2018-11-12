@@ -71,7 +71,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/asukacolor_bg"
             android:onClick="@{Model.onClickListener}"
-            android:text="@{`年龄`+Model.ages}"
+            android:text="@{`年龄：`+Model.ages}"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image" />
