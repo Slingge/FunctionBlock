@@ -2,7 +2,7 @@ package slingge.functionblock.ui.glideImage
 
 import android.os.Bundle
 import slingge.functionblock.R
-import slingge.functionblock.ui.SlinggeActivity
+import slingge.functionblock.base.SlinggeActivity
 
 /**
  * Created by Slingge on 2018/10/23

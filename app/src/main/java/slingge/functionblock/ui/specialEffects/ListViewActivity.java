@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.widget.ListView;
 
 import slingge.functionblock.R;
-import slingge.functionblock.ui.SlinggeActivity;
+import slingge.functionblock.base.SlinggeActivity;
 
 /**
  * Created by Slingge on 2017/1/11 0011.

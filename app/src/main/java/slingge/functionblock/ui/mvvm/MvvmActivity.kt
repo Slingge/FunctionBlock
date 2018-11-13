@@ -3,11 +3,9 @@ package slingge.functionblock.ui.mvvm
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.nostra13.universalimageloader.core.ImageLoader
-import kotlinx.android.synthetic.main.activity_mvvm.*
 import slingge.functionblock.R
 import slingge.functionblock.databinding.ActivityMvvmBinding
-import slingge.functionblock.ui.SlinggeActivity
+import slingge.functionblock.base.SlinggeActivity
 
 /**
  * Created by Slingge on 2018/7/24.

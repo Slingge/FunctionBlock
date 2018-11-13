@@ -24,9 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import slingge.functionblock.R;
-import slingge.functionblock.ui.SlinggeActivity;
+import slingge.functionblock.base.SlinggeActivity;
 import slingge.functionblock.view.BlurBitmap;
-import slingge.functionblock.view.StatusBarUtil;
 
 
 /**

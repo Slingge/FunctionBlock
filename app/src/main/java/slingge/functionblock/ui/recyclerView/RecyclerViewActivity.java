@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,12 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.github.jdsjlzx.recyclerview.SRecyclerView;
-import com.github.jdsjlzx.recyclerview.ProgressStyle;
-
 import slingge.functionblock.R;
 import slingge.functionblock.customView.MyBottomSheetDialog;
-import slingge.functionblock.ui.SlinggeActivity;
+import slingge.functionblock.base.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.listener.RecyclerItemTouchListener;
 import slingge.functionblock.util.ControlWidthHeight;
 import slingge.functionblock.util.ToastUtil;

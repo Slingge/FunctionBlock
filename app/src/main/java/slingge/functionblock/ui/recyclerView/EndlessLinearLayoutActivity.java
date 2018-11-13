@@ -28,7 +28,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 import slingge.functionblock.R;
-import slingge.functionblock.ui.SlinggeActivity;
+import slingge.functionblock.base.SlinggeActivity;
 import slingge.functionblock.ui.recyclerView.adapter.ListBaseAdapter;
 import slingge.functionblock.ui.recyclerView.bean.ItemModel;
 import slingge.functionblock.ui.recyclerView.weight.SampleHeader;

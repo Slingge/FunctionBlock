@@ -2,10 +2,9 @@ package slingge.functionblock.ui.layout;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.text.TextDirectionHeuristicCompat;
 
 import slingge.functionblock.R;
-import slingge.functionblock.ui.SlinggeActivity;
+import slingge.functionblock.base.SlinggeActivity;
 
 /**
  * 约束布局

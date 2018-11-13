@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import slingge.functionblock.R;
-import slingge.functionblock.ui.SlinggeActivity;
+import slingge.functionblock.base.SlinggeActivity;
 
 /**
  * 布局类

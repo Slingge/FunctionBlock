@@ -2,20 +2,18 @@ package slingge.functionblock.ui.rxJava.view
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
 import slingge.functionblock.R
+import slingge.functionblock.base.BaseActivity
 import slingge.functionblock.databinding.ActivityRetrofitBinding
 import slingge.functionblock.retrofitNet.RetrofitUtil
-import slingge.functionblock.ui.SlinggeActivity
+import slingge.functionblock.base.SlinggeActivity
 import slingge.functionblock.ui.rxJava.model.remote.PaoService
 import slingge.functionblock.ui.rxJava.viewModel.PaoViewModel
 
 /**
  * Created by Slingge on 2018/11/7.
  */
-class RetrofitActivity : SlinggeActivity() {
+class RetrofitActivity : BaseActivity() {
 
     private lateinit var mViewModel: PaoViewModel
     private lateinit var mBinding: ActivityRetrofitBinding
@@ -26,10 +24,10 @@ class RetrofitActivity : SlinggeActivity() {
         init()
     }
 
-
-    private fun init() {
-        mViewModel = PaoViewModel(RetrofitUtil.getRetrofitApi().create(PaoService::class.java),this)
+    override fun init() {
+        mViewModel = PaoViewModel(RetrofitUtil.getRetrofitApi().create(PaoService::class.java))
         mBinding.vm = mViewModel
+        setLife(mViewModel)
     }
 
 

@@ -8,6 +8,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 import slingge.functionblock.R
+import slingge.functionblock.base.SlinggeActivity
 import slingge.functionblock.ui.androidHeros.HerosCatalogActivity
 import slingge.functionblock.ui.animGraphical.GraphicalActivity
 import slingge.functionblock.ui.eventDistribution.EventDistributionActivity
@@ -20,7 +21,6 @@ import slingge.functionblock.ui.recyclerView.RecyclerViewActivity
 import slingge.functionblock.ui.rxJava.view.RetrofitActivity
 import slingge.functionblock.ui.sideslip.SideslipMainActivity
 import slingge.functionblock.ui.specialEffects.ClickEffects
-import slingge.functionblock.util.ToastUtil
 
 
 class MainActivity : SlinggeActivity(), View.OnClickListener {

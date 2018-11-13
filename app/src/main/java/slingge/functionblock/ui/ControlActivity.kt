@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.view.View
 import kotlinx.android.synthetic.main.activity_control.*
 import slingge.functionblock.R
+import slingge.functionblock.base.SlinggeActivity
 import slingge.functionblock.util.ToastUtil
 
 /**
