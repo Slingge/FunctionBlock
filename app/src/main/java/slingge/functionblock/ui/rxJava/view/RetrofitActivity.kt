@@ -7,6 +7,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import slingge.functionblock.R
 import slingge.functionblock.databinding.ActivityRetrofitBinding
+import slingge.functionblock.retrofitNet.RetrofitUtil
 import slingge.functionblock.ui.SlinggeActivity
 import slingge.functionblock.ui.rxJava.model.remote.PaoService
 import slingge.functionblock.ui.rxJava.viewModel.PaoViewModel
@@ -27,12 +28,7 @@ class RetrofitActivity : SlinggeActivity() {
 
 
     private fun init() {
-        val remote = Retrofit.Builder()
-                .baseUrl("http://api.jcodecraeer.com/")
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build().create(PaoService::class.java)
-        mViewModel = PaoViewModel(remote)
+        mViewModel = PaoViewModel(RetrofitUtil.getRetrofitApi().create(PaoService::class.java),this)
         mBinding.vm = mViewModel
     }
 

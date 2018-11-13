@@ -1,16 +1,14 @@
 package slingge.functionblock.ui.rxJava.model.remote
 
-import io.reactivex.Single
-import retrofit2.http.GET
-import retrofit2.http.Query
-import slingge.functionblock.ui.rxJava.model.data.Article
+import io.reactivex.Observable
+import retrofit2.http.*
+import slingge.functionblock.ui.mvp.viewModel.UrlModel
 
 /**
  * Created by Slingge on 2018/11/8.
  */
 interface PaoService {
 
-    @GET("article_detail.php")
-    fun getArticleDetail(@Query("id") id: Int): Single<Article>
-
+    @GET("福利/10/1")
+    fun getArticleDetail(): Observable<UrlModel>
 }
