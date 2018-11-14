@@ -10,17 +10,14 @@ import slingge.functionblock.ui.rxJava.viewModel.PaoViewModel
 /**
  * Created by Slingge on 2018/11/7.
  */
-class RetrofitActivity : BaseActivity<ActivityRetrofitBinding>() {
-
-
-    private lateinit var mViewModel: PaoViewModel
+class RetrofitActivity : BaseActivity<ActivityRetrofitBinding, PaoViewModel>() {
 
     override fun getLayoutId() = R.layout.activity_retrofit
 
+    override fun getBaseViewModel() = PaoViewModel(RetrofitUtil.getRetrofitApi().create(PaoService::class.java))
+
     override fun init() {
-        mViewModel = PaoViewModel(RetrofitUtil.getRetrofitApi().create(PaoService::class.java))
-        mBinding.vm = mViewModel
-        setLife(mViewModel)
+        mBinding.vm = viewModel
     }
 
     override fun loadData() {

@@ -11,16 +11,23 @@ import slingge.functionblock.ui.rxJava.viewModel.BaseViewModel
 /**
  * Created by Slingge on 2018/11/13
  */
-abstract class BaseActivity<VB : ViewDataBinding> : NaviAppCompatActivity(), NaviComponent {
+abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : NaviAppCompatActivity(), NaviComponent {
 
     protected lateinit var mBinding: VB
-
-    private var vm: BaseViewModel? = null
+    protected abstract fun getBaseViewModel(): VM
+    var viewModel: VM? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, getLayoutId())
         mBinding.setLifecycleOwner(this)
+
+        viewModel = getBaseViewModel()
+        viewModel?.let {
+            it.provider_activity = NaviLifecycle.createActivityLifecycleProvider(this)
+            it.activity = this
+        }
+
         init()
         loadData()
     }
@@ -29,18 +36,12 @@ abstract class BaseActivity<VB : ViewDataBinding> : NaviAppCompatActivity(), Nav
     protected abstract fun init()
     abstract fun loadData()
 
-    fun setLife(vm: BaseViewModel) {
-        this.vm = vm
-        vm.provider_activity = NaviLifecycle.createActivityLifecycleProvider(this)
-        vm.activity = this
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         //解除ViewModel生命周期感应
-        vm?.let {
+        viewModel?.let {
             it.detachView()
-            vm = null
+            viewModel = null
         }
         mBinding.unbind()
     }
