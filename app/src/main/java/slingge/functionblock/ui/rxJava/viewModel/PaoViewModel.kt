@@ -3,11 +3,12 @@ package slingge.functionblock.ui.rxJava.viewModel
 import android.databinding.Bindable
 import com.trello.rxlifecycle2.android.ActivityEvent
 import slingge.functionblock.BR
+import slingge.functionblock.base.BaseViewModel
 import slingge.functionblock.retrofitNet.NetObserver
 import slingge.functionblock.retrofitNet.RxProgress
 import slingge.functionblock.retrofitNet.RxSchedulers
 import slingge.functionblock.ui.mvp.viewModel.UrlModel
-import slingge.functionblock.ui.rxJava.model.remote.PaoService
+import slingge.functionblock.ui.rxJava.remote.PaoService
 
 /**
  * Created by Slingge on 2018/11/8.

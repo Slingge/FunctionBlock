@@ -1,4 +1,4 @@
-package slingge.functionblock.ui.rxJava.viewModel
+package slingge.functionblock.base
 
 import android.app.Activity
 import android.databinding.BaseObservable

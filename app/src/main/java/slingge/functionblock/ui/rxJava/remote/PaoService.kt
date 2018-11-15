@@ -1,4 +1,4 @@
-package slingge.functionblock.ui.rxJava.model.remote
+package slingge.functionblock.ui.rxJava.remote
 
 import io.reactivex.Observable
 import retrofit2.http.*

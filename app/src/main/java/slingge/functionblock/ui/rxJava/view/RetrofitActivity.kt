@@ -4,7 +4,7 @@ import slingge.functionblock.R
 import slingge.functionblock.base.BaseActivity
 import slingge.functionblock.databinding.ActivityRetrofitBinding
 import slingge.functionblock.retrofitNet.RetrofitUtil
-import slingge.functionblock.ui.rxJava.model.remote.PaoService
+import slingge.functionblock.ui.rxJava.remote.PaoService
 import slingge.functionblock.ui.rxJava.viewModel.PaoViewModel
 
 /**

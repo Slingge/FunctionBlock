@@ -10,7 +10,6 @@ import android.widget.TextView
 
 import slingge.functionblock.R
 import slingge.functionblock.ui.moveFinish.SwipeBackLayout
-import slingge.functionblock.ui.rxJava.viewModel.BaseViewModel
 import slingge.functionblock.view.StatusBarUtil
 
 /**

@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.trello.navi2.NaviComponent
 import com.trello.navi2.component.support.NaviAppCompatActivity
 import com.trello.rxlifecycle2.navi.NaviLifecycle
-import slingge.functionblock.ui.rxJava.viewModel.BaseViewModel
 
 /**
  * Created by Slingge on 2018/11/13
