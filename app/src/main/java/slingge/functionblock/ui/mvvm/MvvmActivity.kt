@@ -33,7 +33,6 @@ class MvvmActivity : SlinggeActivity() {
         binding!!.model = model
 
         val linearLayoutManager = LinearLayoutManager(this)
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         binding!!.recyclerView.layoutManager = linearLayoutManager
 
         var list = ArrayList<ItemModel>()
