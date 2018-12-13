@@ -21,14 +21,6 @@ abstract class NetObserver<T> : Observer<T> {
 
     override fun onNext(t: T) {
         if (t is BaseModel) {
-            val bean = t as BaseModel
-            /* if (Contants.NET_SUCCESS.equals(bean.getResult())) {
-                onSuccess(t);
-            } else if (Contants.NET_NEED_LOGIN.equals(bean.getResult())) {
-                EventBus.getDefault().post(new LoginOut());
-            } else {
-                onError(bean.getResultNote(), new AppException(bean.getResultNote()));
-            }*/
             onSuccess(t)
         } else {
             onSuccess(t)
@@ -50,10 +42,10 @@ abstract class NetObserver<T> : Observer<T> {
         } else {
             onError("请求连接失败", e)
         }
+        ToastUtil.showToast("网络错误")
     }
 
     override fun onComplete() {
-
     }
 
 

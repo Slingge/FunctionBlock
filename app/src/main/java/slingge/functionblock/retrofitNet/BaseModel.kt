@@ -5,5 +5,8 @@ package slingge.functionblock.retrofitNet
  */
 open class BaseModel {
 
+    var result = ""
+    var resultNote = ""
+
 
 }

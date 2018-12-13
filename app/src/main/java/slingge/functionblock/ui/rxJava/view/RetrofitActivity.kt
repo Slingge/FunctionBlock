@@ -2,6 +2,7 @@ package slingge.functionblock.ui.rxJava.view
 
 import slingge.functionblock.R
 import slingge.functionblock.base.BaseActivity
+import slingge.functionblock.base.BaseViewModel
 import slingge.functionblock.databinding.ActivityRetrofitBinding
 import slingge.functionblock.retrofitNet.RetrofitUtil
 import slingge.functionblock.ui.rxJava.remote.PaoService

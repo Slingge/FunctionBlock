@@ -1,13 +1,11 @@
 package slingge.functionblock.ui.rxJava.viewModel
 
 import android.databinding.Bindable
-import android.databinding.ObservableField
 import com.trello.rxlifecycle2.android.ActivityEvent
 import io.reactivex.ObservableTransformer
 import slingge.functionblock.BR
 import slingge.functionblock.base.BaseViewModel
-import slingge.functionblock.retrofitNet.NetObserver
-import slingge.functionblock.retrofitNet.RxSchedulers
+import slingge.functionblock.retrofitNet.*
 import slingge.functionblock.ui.mvp.viewModel.UrlModel
 import slingge.functionblock.ui.rxJava.remote.PaoService
 import slingge.functionblock.util.ToastUtil
@@ -24,15 +22,12 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel() {
         //先使用默认id
         remote.getArticleDetail()
                 .compose(RxSchedulers.compose())
-                .compose(compose())
+                .compose(RxProgress.compose())
                 .compose(provider_activity?.bindUntilEvent(ActivityEvent.DESTROY))
-                .subscribe(object : NetObserver<UrlModel>() {
+                .subscribe(object : MyNetObserver<UrlModel>() {
                     override fun onSuccess(response: UrlModel) {
-                        url=response.results[0].url
+                        url = response.results[0].url
                         notifyPropertyChanged(BR.url)
-                    }
-
-                    override fun onFail(msg: String) {
                     }
                 })
     }
@@ -47,4 +42,6 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel() {
         }
 
     }
+
+
 }
