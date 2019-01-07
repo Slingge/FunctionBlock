@@ -15,9 +15,9 @@ object LoadImage {
 
     @BindingAdapter("bind:imageUrl")
     @JvmStatic
-    fun loadImage(imageView: ImageView, url: String) {
-        if(!TextUtils.isEmpty(url)){
-            ImageLoader.getInstance().displayImage(url, imageView)
+    fun loadImage(imageView: ImageView, url: String?) {
+        url?.let {//url不为空或者null，执行
+            ImageLoader.getInstance().displayImage(it, imageView)
         }
     }
 

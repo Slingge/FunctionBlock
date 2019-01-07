@@ -1,6 +1,8 @@
 package slingge.functionblock.ui.rxJava.viewModel
 
+import android.databinding.BaseObservable
 import android.databinding.Bindable
+import android.databinding.ObservableField
 import com.trello.rxlifecycle2.android.ActivityEvent
 import io.reactivex.ObservableTransformer
 import slingge.functionblock.BR
@@ -15,8 +17,11 @@ import slingge.functionblock.util.ToastUtil
  */
 class PaoViewModel(val remote: PaoService) : BaseViewModel() {
 
-    @Bindable
-    var url = ""
+//    @Bindable
+//    var url = ""
+
+    //或者
+    val urls = ObservableField<String>()
 
     fun loadArticle() {
         //先使用默认id
@@ -26,8 +31,10 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel() {
                 .compose(provider_activity?.bindUntilEvent(ActivityEvent.DESTROY))
                 .subscribe(object : MyNetObserver<UrlModel>() {
                     override fun onSuccess(response: UrlModel) {
-                        url = response.results[0].url
-                        notifyPropertyChanged(BR.url)
+//                        url = response.results[0].url
+//                        notifyPropertyChanged(BR.url)
+                        //或者
+                        urls.set(response.results[0].url)
                     }
                 })
     }

@@ -2,6 +2,7 @@ package slingge.functionblock.ui.mvvm
 
 import android.databinding.BaseObservable
 import android.databinding.Bindable
+import android.databinding.ObservableBoolean
 import android.view.View
 import slingge.functionblock.BR
 import slingge.functionblock.R
@@ -11,6 +12,8 @@ import slingge.functionblock.util.ToastUtil
  * Created by Slingge on 2018/7/24.
  */
 class Model : BaseObservable() {
+
+    val loading=ObservableBoolean()
 
     @Bindable
     var name = ""
