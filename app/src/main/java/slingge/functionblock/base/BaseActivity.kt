@@ -3,14 +3,12 @@ package slingge.functionblock.base
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
-import com.trello.navi2.NaviComponent
-import com.trello.navi2.component.support.NaviAppCompatActivity
-import com.trello.rxlifecycle2.navi.NaviLifecycle
+import android.support.v7.app.AppCompatActivity
 
 /**
  * Created by Slingge on 2018/11/13
  */
-abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : NaviAppCompatActivity(), NaviComponent {
+abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity() {
 
     protected lateinit var mBinding: VB
     protected abstract fun getBaseViewModel(): VM
@@ -23,7 +21,6 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : NaviAppC
 
         viewModel = getBaseViewModel()
         viewModel?.let {
-            it.provider_activity = NaviLifecycle.createActivityLifecycleProvider(this)
             it.activity = this
         }
 

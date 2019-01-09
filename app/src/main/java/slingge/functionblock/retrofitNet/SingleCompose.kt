@@ -10,20 +10,28 @@ import slingge.functionblock.util.ToastUtil
 object SingleCompose {
 
 
-    fun <T> compose(): SingleTransformer<T, T> {
+    fun <T> compose(SingleObserver:SingleObserverInterface<T>): SingleTransformer<T, T> {
         return return SingleTransformer { upstream ->
             upstream.doOnSubscribe {
                 ToastUtil.showToast("开始")
             }.doAfterSuccess {
                 ToastUtil.showToast("结束")
-            }.doOnSuccess { t: T ->
-                Log.e("faefawefwef","请求成功")
+            }.doOnSuccess {t:T?->
+                t?.let {
+                    SingleObserver.onSuccess(t)
+                    if((it as BaseModel).result=="0"){
+                        SingleObserver.onSuccess(t)
+                    }else{
+                        Log.e("数据错误","数据错误")
+                        ToastUtil.showToast("数据错误")
+                    }
+                }
             }.doOnError {
-                Log.e("faefawefwef","请求失败")
                 ToastUtil.showToast(it.toString())
             }
         }
     }
+
 
 
 }

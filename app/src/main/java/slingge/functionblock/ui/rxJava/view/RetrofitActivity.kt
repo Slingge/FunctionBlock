@@ -4,7 +4,6 @@ import com.slingge.paopaonet.util.bindLifeCycle
 import kotlinx.android.synthetic.main.activity_retrofit.*
 import slingge.functionblock.R
 import slingge.functionblock.base.BaseActivity
-import slingge.functionblock.base.BaseViewModel
 import slingge.functionblock.databinding.ActivityRetrofitBinding
 import slingge.functionblock.retrofitNet.RetrofitUtil
 import slingge.functionblock.ui.rxJava.remote.PaoService
@@ -23,7 +22,7 @@ class RetrofitActivity : BaseActivity<ActivityRetrofitBinding, PaoViewModel>() {
         mBinding.vm = viewModel
 
         btn.setOnClickListener {
-            viewModel?.loadArticle()!!.bindLifeCycle(this).subscribe ({},{})
+            viewModel?.loadArticle()!!.bindLifeCycle(this).subscribe()
         }
     }
 

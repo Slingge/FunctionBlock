@@ -5,6 +5,7 @@ import com.slingge.paopaonet.util.async
 import com.trello.rxlifecycle2.android.ActivityEvent
 import io.reactivex.ObservableTransformer
 import io.reactivex.Single
+import io.reactivex.SingleSource
 import slingge.functionblock.base.BaseViewModel
 import slingge.functionblock.retrofitNet.*
 import slingge.functionblock.ui.mvp.viewModel.UrlModel
@@ -14,7 +15,8 @@ import slingge.functionblock.util.ToastUtil
 /**
  * Created by Slingge on 2018/11/8.
  */
-class PaoViewModel(val remote: PaoService) : BaseViewModel() {
+class PaoViewModel(val remote: PaoService) : BaseViewModel(), SingleObserverInterface<UrlModel> {
+
 
 //    @Bindable
 //    var url = ""
@@ -40,16 +42,16 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel() {
 
 
     fun loadArticle(): Single<UrlModel> =
-    //先使用默认id
             remote.getArticleDetail()
                     .async()
-                    .compose(SingleCompose.compose())
-                    .doOnSuccess { response: UrlModel ->
-                        // urls = response.results[0].url
-                        // notifyPropertyChanged(BR.url)
-                        //或者
-                        urls.set(response.results[0].url)
-                    }
+                    .compose(SingleCompose.compose(this))
+
+    /*        .doOnSuccess { response: UrlModel ->
+                // urls = response.results[0].url
+                // notifyPropertyChanged(BR.url)
+                //或者
+                urls.set(response.results[0].url)
+            }*/
 
 
     fun <T> compose(): ObservableTransformer<T, T> {
@@ -62,4 +64,12 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel() {
         }
     }
 
+
+    override fun <T> onSuccess(response: T) {
+        urls.set((response as UrlModel).results[0].url)
+    }
+
 }
+
+
+
