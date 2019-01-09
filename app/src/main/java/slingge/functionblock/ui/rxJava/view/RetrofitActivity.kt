@@ -1,5 +1,7 @@
 package slingge.functionblock.ui.rxJava.view
 
+import com.slingge.paopaonet.util.bindLifeCycle
+import kotlinx.android.synthetic.main.activity_retrofit.*
 import slingge.functionblock.R
 import slingge.functionblock.base.BaseActivity
 import slingge.functionblock.base.BaseViewModel
@@ -19,6 +21,10 @@ class RetrofitActivity : BaseActivity<ActivityRetrofitBinding, PaoViewModel>() {
 
     override fun init() {
         mBinding.vm = viewModel
+
+        btn.setOnClickListener {
+            viewModel?.loadArticle()!!.bindLifeCycle(this).subscribe ({},{})
+        }
     }
 
     override fun loadData() {

@@ -1,6 +1,7 @@
 package slingge.functionblock.ui.rxJava.remote
 
 import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.http.*
 import slingge.functionblock.ui.mvp.viewModel.UrlModel
 
@@ -9,6 +10,9 @@ import slingge.functionblock.ui.mvp.viewModel.UrlModel
  */
 interface PaoService {
 
+//    @GET("福利/10/1")
+//    fun getArticleDetail(): Observable<UrlModel>
+
     @GET("福利/10/1")
-    fun getArticleDetail(): Observable<UrlModel>
+    fun getArticleDetail(): Single<UrlModel>
 }

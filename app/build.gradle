@@ -42,6 +42,10 @@ allprojects {
 kapt {
     generateStubs = true
 }
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -68,9 +72,9 @@ dependencies {
     //解决databinding 和kotlin的冲突 支持
 
     //网络
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
     //rxjava
@@ -78,8 +82,14 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-navi:2.2.1'
+    //autodispose,代替RxLifecycle管理网络请求生命周期
+    implementation 'com.uber.autodispose:autodispose:0.8.0'
+    implementation 'com.uber.autodispose:autodispose-android-archcomponents:0.8.0'
+    //log打印
+    implementation 'com.orhanobut:logger:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
 
-}
-repositories {
-    mavenCentral()
+
+
+
 }

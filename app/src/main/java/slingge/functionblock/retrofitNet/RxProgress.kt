@@ -25,7 +25,9 @@ object RxProgress {
     }
 
     fun <T> compose(activity: Activity): ObservableTransformer<T, T> {
-        return ObservableTransformer { upstream -> upstream.doOnSubscribe { }.doOnTerminate { } }
+        return ObservableTransformer { upstream -> upstream.doOnSubscribe {
+
+        }.doOnTerminate { } }
     }
 
 
