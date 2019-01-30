@@ -88,8 +88,4 @@ dependencies {
     //log打印
     implementation 'com.orhanobut:logger:2.1.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
-
-
-
-
 }

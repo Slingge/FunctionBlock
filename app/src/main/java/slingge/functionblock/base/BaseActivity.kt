@@ -14,6 +14,12 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
     protected abstract fun getBaseViewModel(): VM
     var viewModel: VM? = null
 
+
+    abstract fun getLayoutId(): Int
+    protected abstract fun init()
+    protected open fun loadData() {}
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, getLayoutId())
@@ -27,10 +33,6 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
         init()
         loadData()
     }
-
-    abstract fun getLayoutId(): Int
-    protected abstract fun init()
-    abstract fun loadData()
 
     override fun onDestroy() {
         super.onDestroy()

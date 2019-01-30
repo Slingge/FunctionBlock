@@ -41,6 +41,7 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel(), SingleObserverInte
 //    }
 
 
+
     fun loadArticle(): Single<UrlModel> =
             remote.getArticleDetail()
                     .async()

@@ -1,6 +1,5 @@
 package slingge.functionblock.ui.rxJava.remote
 
-import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.http.*
 import slingge.functionblock.ui.mvp.viewModel.UrlModel
