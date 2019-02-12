@@ -24,7 +24,7 @@ fun <T> Single<T>.async(): Single<T> =
 //                .delay(withDelay, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
 
-//解绑生命周期
+//绑定生命周期
 fun <T> Single<T>.bindLifeCycle(owner: LifecycleOwner): SingleSubscribeProxy<T> {
     return this.`as`(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(owner)))
 }

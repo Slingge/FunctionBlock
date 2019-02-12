@@ -2,8 +2,15 @@ package slingge.functionblock.base
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.view.WindowManager
+import slingge.functionblock.R
+import slingge.functionblock.view.StatusBarUtil
 
 /**
  * Created by Slingge on 2018/11/13
@@ -29,10 +36,10 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
         viewModel?.let {
             it.activity = this
         }
-
         init()
         loadData()
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

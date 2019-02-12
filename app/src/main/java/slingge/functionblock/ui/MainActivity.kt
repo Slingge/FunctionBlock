@@ -45,8 +45,6 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
         tv_mvp.setOnClickListener(this)
         tv_mvvm.setOnClickListener(this)
         tv_RxJava.setOnClickListener(this)
-
-
     }
 
     override fun onClick(view: View) {

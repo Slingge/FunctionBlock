@@ -1,6 +1,7 @@
 package slingge.functionblock.util
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.os.Handler
@@ -97,6 +98,5 @@ object ToastUtil {
         msg.data = bundle
         baseHandler.sendMessage(msg)
     }
-
 
 }

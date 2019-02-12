@@ -1,11 +1,10 @@
 package slingge.functionblock.ui.rxJava.viewModel
 
 import android.databinding.ObservableField
+import com.orhanobut.logger.Logger
 import com.slingge.paopaonet.util.async
-import com.trello.rxlifecycle2.android.ActivityEvent
 import io.reactivex.ObservableTransformer
 import io.reactivex.Single
-import io.reactivex.SingleSource
 import slingge.functionblock.base.BaseViewModel
 import slingge.functionblock.retrofitNet.*
 import slingge.functionblock.ui.mvp.viewModel.UrlModel
@@ -41,7 +40,6 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel(), SingleObserverInte
 //    }
 
 
-
     fun loadArticle(): Single<UrlModel> =
             remote.getArticleDetail()
                     .async()
@@ -67,6 +65,8 @@ class PaoViewModel(val remote: PaoService) : BaseViewModel(), SingleObserverInte
 
 
     override fun <T> onSuccess(response: T) {
+        Logger.e("拿到数据", "拿到数据")
+        ToastUtil.zToast(activity, "拿到数据")
         urls.set((response as UrlModel).results[0].url)
     }
 
