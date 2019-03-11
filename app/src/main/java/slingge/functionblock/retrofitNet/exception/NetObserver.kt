@@ -1,4 +1,4 @@
-package slingge.functionblock.retrofitNet
+package slingge.functionblock.retrofitNet.exception
 
 import android.net.ParseException
 
@@ -12,6 +12,7 @@ import java.net.UnknownHostException
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import retrofit2.HttpException
+import slingge.functionblock.retrofitNet.BaseModel
 import slingge.functionblock.util.ToastUtil
 
 abstract class NetObserver<T> : Observer<T> {

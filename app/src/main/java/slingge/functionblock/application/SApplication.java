@@ -2,6 +2,9 @@ package slingge.functionblock.application;
 
 import android.app.Application;
 
+import com.orhanobut.logger.Logger;
+import com.orhanobut.logger.AndroidLogAdapter;
+
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Cache;
@@ -14,8 +17,6 @@ import slingge.functionblock.util.ImageLoaderUtil;
 
 public class SApplication extends Application {
     //
-
-
 
 
     private static SApplication myApplication;
@@ -38,6 +39,8 @@ public class SApplication extends Application {
         super.onCreate();
         myApplication = this;
         ImageLoaderUtil.configImageLoader(this);
+
+        Logger.addLogAdapter(new AndroidLogAdapter());
     }
 
     private OkHttpClient getClient() {

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.WindowManager
 import slingge.functionblock.R
+import slingge.functionblock.retrofitNet.exception.dispatchFailure
 import slingge.functionblock.view.StatusBarUtil
 
 /**
@@ -50,5 +51,13 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompa
         }
         mBinding.unbind()
     }
+
+
+
+    //网络异常捕捉
+    fun toastFailure(error: Throwable?) {
+        dispatchFailure(this, error)
+    }
+
 
 }

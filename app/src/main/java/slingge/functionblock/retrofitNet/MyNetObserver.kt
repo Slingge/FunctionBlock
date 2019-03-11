@@ -1,5 +1,6 @@
 package slingge.functionblock.retrofitNet
 
+import slingge.functionblock.retrofitNet.exception.NetObserver
 import slingge.functionblock.util.ToastUtil
 
 abstract class MyNetObserver<T> : NetObserver<T>() {

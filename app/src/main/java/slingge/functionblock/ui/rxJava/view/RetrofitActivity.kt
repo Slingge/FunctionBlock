@@ -22,7 +22,7 @@ class RetrofitActivity : BaseActivity<ActivityRetrofitBinding, PaoViewModel>() {
         mBinding.vm = viewModel
 
         btn.setOnClickListener {
-            viewModel?.loadArticle()!!.bindLifeCycle(this).subscribe()
+            viewModel?.loadArticle()!!.bindLifeCycle(this).subscribe({},{})
         }
     }
 
