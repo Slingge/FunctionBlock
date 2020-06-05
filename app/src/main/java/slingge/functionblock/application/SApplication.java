@@ -19,7 +19,7 @@ public class SApplication extends Application {
     //
 
 
-    private static SApplication myApplication;
+    public static SApplication myApplication;
 
     public static SApplication getInstance() {
         // if语句下是不会走的，Application本身已单例

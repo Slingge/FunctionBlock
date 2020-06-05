@@ -5,6 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.irozon.alertview.AlertActionStyle
+import com.irozon.alertview.AlertStyle
+import com.irozon.alertview.AlertTheme
+import com.irozon.alertview.AlertView
+import com.irozon.alertview.objects.AlertAction
 import kotlinx.android.synthetic.main.activity_main.*
 
 import slingge.functionblock.R
@@ -47,6 +52,27 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
         tv_RxJava.setOnClickListener(this)
     }
 
+
+    override fun onStart() {
+        super.onStart()
+        val alert = AlertView("", "What do you want to do with the file?", AlertStyle.DIALOG)
+        alert.addAction(AlertAction("Delete it", AlertActionStyle.NEGATIVE) { action ->
+            Toast.makeText(this, action.title, Toast.LENGTH_SHORT).show()
+        })
+        alert.addAction(AlertAction("Copy", AlertActionStyle.DEFAULT) { action ->
+            Toast.makeText(this, action.title, Toast.LENGTH_SHORT).show()
+        })
+        alert.addAction(AlertAction("Move", AlertActionStyle.DEFAULT) { action ->
+            Toast.makeText(this, action.title, Toast.LENGTH_SHORT).show()
+        })
+        alert.addAction(AlertAction("Duplicate", AlertActionStyle.DEFAULT) { action ->
+            Toast.makeText(this, action.title, Toast.LENGTH_SHORT).show()
+        })
+
+        alert.setTheme(AlertTheme.DARK)
+        alert.show(this)
+    }
+
     override fun onClick(view: View) {
         when (view.id) {
             R.id.tv_layout -> startActivity(Intent(this, LayoutViewActivity::class.java))
@@ -65,14 +91,15 @@ class MainActivity : SlinggeActivity(), View.OnClickListener {
     }
 
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) { //RESULT_OK = -1
-            val bundle = data.extras
+            val bundle = data?.extras
             val scanResult = bundle!!.getString("result")
             Toast.makeText(this@MainActivity, scanResult, Toast.LENGTH_LONG).show()
         }
     }
+
 
 
 }

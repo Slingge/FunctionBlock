@@ -1,1 +1,1 @@
-include ':app', ':SRecyclerview_library', ':okhttputils'
+include ':app', ':SRecyclerview_library', ':okhttputils', ':alertview'

@@ -1,8 +1,8 @@
 package slingge.functionblock.ui.util
 
 import android.util.Log
-import com.lxkj.qiqihunshe.app.MyApplication
 import com.orhanobut.logger.Logger
+import slingge.functionblock.application.SApplication
 
 /**
  * Created by Slingge on 2018/1/3 0003.
@@ -40,14 +40,14 @@ object abLog {
                 while (i < text.length) {
                     count++
                     if (i + 4000 < text.length) {
-                        Log.e(MyApplication.CONTEXT.javaClass.simpleName + count, text.substring(i, i + 4000))
+                        Log.e(SApplication.myApplication.javaClass.simpleName + count, text.substring(i, i + 4000))
                     } else {
-                        Log.e(MyApplication.CONTEXT.javaClass.simpleName + count, text.substring(i, text.length))
+                        Log.e(SApplication.myApplication.javaClass.simpleName + count, text.substring(i, text.length))
                     }
                     i += 4000
                 }
             } else
-                Logger.e(MyApplication.CONTEXT.javaClass.simpleName + "\n" + text)
+                Logger.e(SApplication.myApplication.javaClass.simpleName + "\n" + text)
         }
     }
 }
